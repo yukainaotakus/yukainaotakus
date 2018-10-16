@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="64e22778-15a6-4227-8c70-4d3afe8fe761" name="gcloud(dooun.net)" url="http://35.187.211.219">
+        <fileTransfer host="35.187.211.219" port="22" privateKey="C:\Programming\keys\gcloud\dooun\id_rsa" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
