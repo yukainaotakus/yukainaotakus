@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a63ae102-2f05-489a-adf4-387ec8f52579" name="#1 画面】创建一个主页" comment="#1 画面】创建一个主页">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-    </list>
     <list id="f4323673-3576-4383-b903-9ace9abc67aa" name="Default" comment="" />
+    <list default="true" id="a63ae102-2f05-489a-adf4-387ec8f52579" name="#1 画面】创建一个主页" comment="#1 画面】创建一个主页">
+      <change beforePath="$PROJECT_DIR$/homework/ritenu/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/homework/ritenu/index.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,8 +59,8 @@
           <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/homework/ritenu/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="263">
-                  <caret line="36" column="64" lean-forward="true" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
+                <state relative-caret-position="246">
+                  <caret line="35" column="10" lean-forward="true" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
                   <folding>
                     <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
@@ -89,7 +89,6 @@
         <option value="$PROJECT_DIR$/pages/login.php" />
         <option value="$PROJECT_DIR$/command.sh" />
         <option value="$PROJECT_DIR$/robots.txt" />
-        <option value="$PROJECT_DIR$/homework/ritenu/index.php" />
         <option value="$PROJECT_DIR$/homework/gokoyoku/index.php" />
         <option value="$PROJECT_DIR$/homework/gototo/index.php" />
         <option value="$PROJECT_DIR$/homework/ka/index.php" />
@@ -98,6 +97,7 @@
         <option value="$PROJECT_DIR$/homework/ka/userRegistValidate.php" />
         <option value="$USER_HOME$/Google ドライブ/社内/2018.10.10_秋季PHP组/1_PHP/宿題/01_gokoyoku_homework/12_fix.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/homework/ritenu/index.php" />
       </list>
     </option>
   </component>
@@ -111,8 +111,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1253" />
-    <option name="y" value="32" />
+    <option name="x" value="-972" />
+    <option name="y" value="97" />
     <option name="width" value="1280" />
     <option name="height" value="994" />
   </component>
@@ -216,19 +216,20 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40558000" />
+    <option name="totallyTimeSpent" value="41188000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1386" y="26" width="1024" height="795" extended-state="0" />
+    <frame x="-1161" y="78" width="1024" height="795" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" weight="0.3299566" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.33863965" />
+      <window_info anchor="bottom" id="File Transfer" order="8" visible="true" weight="0.26483357" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.33863965" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24170125" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24170125" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -250,7 +251,6 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="File Transfer" order="8" weight="0.2652124" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -567,8 +567,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/homework/ritenu/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="36" column="64" lean-forward="true" selection-start-line="36" selection-start-column="64" selection-end-line="36" selection-end-column="64" />
+        <state relative-caret-position="246">
+          <caret line="35" column="10" lean-forward="true" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
           <folding>
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
