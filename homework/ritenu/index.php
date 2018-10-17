@@ -29,7 +29,7 @@
     <div style="height:300px; border:1px solid;background-color: #f1f1f1">
         &nbsp;&nbsp;ritenu：<br>
         <div style="margin-left:30px;width:180px;height:80px;background-color:#90dd1a;border:solid 1px;border-radius: 5px;">
-            等会我还在做。
+            等会我还在做。asfasdfasf
         </div>
 
 
