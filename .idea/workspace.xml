@@ -1,35 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a63ae102-2f05-489a-adf4-387ec8f52579" name="#1 画面】创建一个主页" comment="#1 画面】创建一个主页">
-      <change afterPath="$PROJECT_DIR$/View/common_footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/View/common_header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/house.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/kabotya.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jsonData.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php_little_game/roll_point.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php_little_game/touzi.jpeg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02_ritennuhomework/1.html" beforeDir="false" afterPath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02_ritennuhomework/2.html" beforeDir="false" afterPath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02_ritennuhomework/3.html" beforeDir="false" afterPath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02_ritennuhomework/4.html" beforeDir="false" afterPath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02_ritennuhomework/img/ii.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/img/ii.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02_ritennuhomework/img/iii.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/img/iii.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02_ritennuhomework/img/panda.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/img/panda.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02_ritennuhomework/img/ti.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/img/ti.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02_ritennuhomework/img/tim.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/img/tim.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02_ritennuhomework/img/timg (1).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/img/timg (1).jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02_ritennuhomework/img/timg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/img/timg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02_ritennuhomework/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/02_ritennuhomework/lol01.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/lol01.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/gokoyoku/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/homework/gokoyoku/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/ritenu/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/homework/ritenu/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-    </list>
     <list id="f4323673-3576-4383-b903-9ace9abc67aa" name="Default" comment="" />
+    <list default="true" id="a63ae102-2f05-489a-adf4-387ec8f52579" name="#7 【基础构建】" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,11 +15,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="401">
+              <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -54,12 +24,8 @@
       <file leaf-file-name="roll_point.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php_little_game/roll_point.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-646">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="170">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -131,10 +97,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2587" />
-    <option name="y" value="22" />
-    <option name="width" value="1340" />
-    <option name="height" value="964" />
+    <option name="x" value="-1204" />
+    <option name="y" value="115" />
+    <option name="width" value="1252" />
+    <option name="height" value="993" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -207,6 +173,7 @@
       <workItem from="1540448197715" duration="6498000" />
       <workItem from="1540512610449" duration="798000" />
       <workItem from="1540886663686" duration="6713000" />
+      <workItem from="1541383952873" duration="1099000" />
     </task>
     <task id="LOCAL-00001" summary="#1 画面】创建一个主页">
       <created>1538717680859</created>
@@ -233,32 +200,32 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57973000" />
+    <option name="totallyTimeSpent" value="59072000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2177" y="299" width="1227" height="750" extended-state="0" />
+    <frame x="-1454" y="21" width="1001" height="794" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2571732" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="File Transfer" order="8" weight="0.1777042" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.12457531" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.328125" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20479862" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.25072464" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.328125" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.3299566" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="File Transfer" order="8" weight="0.1777042" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
@@ -278,43 +245,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/homework/ka/userRegist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homework/ka/userRegistValidate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="34" lean-forward="true" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="123" lean-forward="true" selection-start-line="10" selection-start-column="123" selection-end-line="10" selection-end-column="123" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore" />
-    <entry file="file://$PROJECT_DIR$/command.sh" />
     <entry file="file://$PROJECT_DIR$/app.yaml" />
     <entry file="file://$PROJECT_DIR$/pages/login.php" />
     <entry file="file://$PROJECT_DIR$/robots.txt">
@@ -544,25 +474,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php_little_game/roll_point.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-646">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jsonData.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/images/bg.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/favicon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/house.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/kabotya.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/slim.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="143">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/img/timg (1).jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="54" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="401">
+          <caret line="31" column="39" lean-forward="true" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
         </state>
       </provider>
     </entry>
