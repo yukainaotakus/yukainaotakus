@@ -1,78 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomePage</title>
+<?php
+$display['title'] = "主页";
+?>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127217278-1"></script>
-    <script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+<?php include 'View/common_header.php';// 引用共通部品：头部?>
 
-		gtag('config', 'UA-127217278-1');
-    </script>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</head>
-<body>
-    <header style="min-height:100px;background-color: rgba(220,103,19,0.64);color:#f1f1f1;text-align:center;font-size:2em;">
-        <div class="row align-items-center">
-            <div class="col-sm-3" style="margin-top:10px;">
-<!--                <img src="/images/slim.png" title="slim" style="height:80px;">-->
-            </div>
-            <div class="col-sm-9">
-                愉快な練習ヽ(●-`Д´-)ノ
-            </div>
-        </div>
-    </header>
-    <div class="container-fluid" style="min-height:600px;">
-        <div class="row">
-            <br>
-        </div>
-        <div>
-            <h4></h4>
+<div class="container-fluid" style="min-height:600px;">
+    <div class="row">
+        <div class="col-sm-12">
             <ul>
                 <li><a href="homework/gototo">gototo</a></li>
-            </ul>
-            <ul>
                 <li><a href="homework/gokoyoku">gokoyoku</a><span style="font-size:2em;color:red;">囍</span><a href="homework/ritenu">ritenu</a></li>
+                <li><a href="homework/ka">课内代码</a></li>
+                <li><a href="php_little_game/roll_point.php">掷骰子效果</a></li>
+                <li>    <a href="jsonData.txt">json数据</a>
+                </li>
             </ul>
-            <ul>
-                <li></li>
-            </ul>
-            <ul>
-                <li><a href="homework/ka">课内代码</a> </li>
-            </ul>
-
-
         </div>
-        <div class="row" style="height:500px;">
-<!--            <div class="col-sm-6" style="background-color:#c9b6e7;">板块1</div>-->
-<!--            <div class="col-sm-6" style="background-color:#d0e6ff;">板块2</div>-->
-        </div>
-
-
-
-
     </div>
+</div>
 
-    <hr>
+<div style="width:500px;">
+<?php
+$jsonData = "{\"広告宣伝\":\"広告宣伝\",\"マーケティングリサーチ・分析\":\"マーケティングリサーチ\",\"ＦＣオーナー\":\"ＦＣオーナー\",\"マーケティング・企画・宣伝\":\"映像\",\"商品企画\":\"商品企画\",\"ＣＥＯ\":\"ＣＥＯ\",\"マーチャンダイザー\":\"マーチャンダイザー\",\"営業企画\":\"営業企画\",\"バイヤー\":\"バイヤー\",\"事業企画\":\"事業企画\",\"代理店営業\":\"代理店営業\",\"店舗開発\":\"店舗開発\",\"商品開発\":\"商品開発\",\"仕入れ\":\"仕入\",\"事業プロヂュース\":\"プロヂュース\",\"ＣＦＯ\":\"ＣＦＯ\",\"ＣＩＯ\":\"ＣＩＯ\",\"ＣＯＯ\":\"ＣＯＯ\",\"研究生\":\"研究生\",\"経営企画\":\"経営企画\",\"経営幹部\":\"経営幹部\",\"ＣＴＯ\":\"ＣＴＯ\",\"販促企画\":\"販促\",\"ＦＣ開発\":\"ＦＣ開発\",\"海外事業企画\":\"海外事業企画\"}";
 
-    <footer class="container-fluid">
-        <p>Copyright © 2018 Nobody All rights reserved </p>
-    </footer>
+echo $jsonData;
+
+$data = json_decode($jsonData);
+print_r($data);
+?>
+</div>
+<div class="row" style="height:500px;">
+    <!--            <div class="col-sm-6" style="background-color:#c9b6e7;">板块1</div>-->
+    <!--            <div class="col-sm-6" style="background-color:#d0e6ff;">板块2</div>-->
+</div>
 
 
 
-
-
-
-
-</body>
-</html>
+<?php include 'View/common_footer.php';// 引用共通部品：脚步?>
