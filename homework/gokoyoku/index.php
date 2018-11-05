@@ -12,6 +12,7 @@
 <body>
 
 <h3>结果我又写了一遍 </h3>
+<a href="ziwojieshao/ziwojieshao.php">自我介绍</a>
 
 
 
