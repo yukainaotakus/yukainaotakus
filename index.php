@@ -9,10 +9,11 @@ $display['title'] = "主页";
         <div class="col-sm-12">
             <ul>
                 <li><a href="homework/gototo">gototo</a></li>
-                <li><a href="homework/gokoyoku">gokoyoku</a><span style="font-size:2em;color:red;">囍</span><a href="homework/ritenu">ritenu</a></li>
+                <li><a href="homework/gokoyoku">gokoyoku</a></li>
+                <li><a href="homework/ritenu">ritenu</a></li>
                 <li><a href="homework/ka">课内代码</a></li>
-                <li><a href="uselessSeries/php_little_game/roll_point.php">掷骰子效果</a></li>
-                <li>    <a href="jsonData.txt">json数据</a>
+                <li><a href="no_egg_use.php">没软用系列</a></li>
+                <li><a href="jsonData.txt">json数据</a>
                 </li>
             </ul>
         </div>
