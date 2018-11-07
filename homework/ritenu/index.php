@@ -21,7 +21,7 @@
  </head>
  <body>
 
- <a href="02_ritennuhomework">自我介绍</a>
+
  	<h1></h1>
 
 
@@ -31,7 +31,7 @@
     <div style="height:300px; border:1px solid;background-color: #f1f1f1">
         &nbsp;&nbsp;ritenu：<br>
         <div style="margin-left:30px;width:180px;height:80px;background-color:#90dd1a;border:solid 1px;border-radius: 5px;">
-            等会我还在做。asfasdfasf
+            好吧我已经做完了，超陋版
         </div>
 
 
@@ -43,7 +43,7 @@
         <textarea name="message" title="message" style="width:98%;height:85%;">
 
         </textarea>
-        <button style="float:right">送信</button>
+         <a href="02_ritennuhomework">自我介绍提交</a>
     </div>
 
  
