@@ -1,0 +1,66 @@
+
+<!DOCTYPE HTML>
+
+
+<html>
+<head>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta charset="utf-8">
+
+                <title></title>
+<script src="jQuery/js/jquery.min.js"></script>
+
+
+<script>
+    var name="";
+    var des=""
+
+$(function(){
+    $("#new").click(function(){
+       $("img").attr("src","upload/images/1.jpg"); 
+    $("#des").html("新手的描述");
+    })
+    
+    $("#old").click(function(){
+       $("img").attr("src","upload/images/02.jpg"); 
+    $("#des").html("老司机的描述");
+    })
+
+
+
+
+ });
+
+</script>
+
+
+
+
+</head>
+
+
+
+
+<body>
+
+<form>
+<p>game mode</p>
+
+<input id="new" type="radio" checked="checked" name="mode"/>新手
+<input id="old" type="radio" name="mode"/>老司机
+</form>
+
+<br>
+<span id="img"><img src="upload/images/02.jpg" ></span>
+
+<br><span id="des">新手的描述</span>
+
+
+
+
+
+
+</body>
+</html>
