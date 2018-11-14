@@ -19,13 +19,15 @@
 
 $(function(){
     $("#new").click(function(){
-       $("img").attr("src","upload/images/1.jpg"); 
-    $("#des").html("新手的描述");
+      $("img").attr("src","upload/images/1.jpg"); 
+      $("img").attr("title","描述1"); 
+      $("#des").html( $("img").attr("title"));
     })
     
     $("#old").click(function(){
-       $("img").attr("src","upload/images/02.jpg"); 
-    $("#des").html("老司机的描述");
+      $("img").attr("src","upload/images/02.jpg"); 
+      $("img").attr("title","描述2"); 
+      $("#des").html( $("img").attr("title"));
     })
 
 
@@ -53,9 +55,9 @@ $(function(){
 </form>
 
 <br>
-<span id="img"><img src="upload/images/02.jpg" ></span>
+<span id="img"><img src="upload/images/1.jpg" title="描述1"></span>
 
-<br><span id="des">新手的描述</span>
+<br><span id="des">描述1</span>
 
 
 
