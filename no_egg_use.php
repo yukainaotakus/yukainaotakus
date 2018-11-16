@@ -65,11 +65,13 @@ a:link {color:#FF6666;}
      <dd><a href="" target="_self">ri版</a></dd>
      <dd><a href="" target="_self">gotaku版</a></dd>
      <dd><a href="" target="_self">老师版</a></dd>
-    
+
+
+    <dt><b>Monster</b></dt>
+    <dd><a href="uselessSeries/monster.html" target="_self">jQuery之美女与Monster</a></dd>
 
 
 
-    
 </dl>
 <div style="font-size:150%">
 <a href="index.php" >返回yukainaotakus</a>

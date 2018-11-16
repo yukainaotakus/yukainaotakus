@@ -25,6 +25,4 @@ $display['title'] = "主页";
     <!--            <div class="col-sm-6" style="background-color:#d0e6ff;">板块2</div>-->
 </div>
 
-
-
 <?php include 'View/common_footer.php';// 引用共通部品：脚步?>
