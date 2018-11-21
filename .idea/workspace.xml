@@ -1,17 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a63ae102-2f05-489a-adf4-387ec8f52579" name="#7 【基础构建】" comment="#11 没用系列之：Monster">
-      <change afterPath="$PROJECT_DIR$/images/dishu.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/hamer1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/hamer2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sound/hit.ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uselessSeries/hitDishu/hitDishu.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homework/tmphomework/jquerycheck02_gototo.html" beforeDir="false" afterPath="$PROJECT_DIR$/homework/tmphomework/jquerycheck02_gototo.html" afterDir="false" />
-    </list>
     <list id="f4323673-3576-4383-b903-9ace9abc67aa" name="Default" comment="" />
+    <list default="true" id="a63ae102-2f05-489a-adf4-387ec8f52579" name="#7 【基础构建】" comment="#11 没用系列之：Monster">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/common_footer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/View/common_header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/gokoyoku/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/gokoyoku/jisuanqi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/gokoyoku/ziwojieshao/2016-10-24 .jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/gokoyoku/ziwojieshao/9999.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/gokoyoku/ziwojieshao/css/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/gokoyoku/ziwojieshao/guanyumiku.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/gokoyoku/ziwojieshao/gutianle.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/gokoyoku/ziwojieshao/zhazhahui.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/gokoyoku/ziwojieshao/ziwojieshao.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/gokoyoku/ziwojieshao/ziwojieshao2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/gokoyoku/ziwojieshao/ziwojieshao3.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/gokoyoku/ziwojieshao/【初音ミク】四角い地球を丸くする【オリジナルMV】.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/gototo/answer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/gototo/img/ou.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/gototo/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/gototo/yunshi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/ka/function.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/ka/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/ka/testpage.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/ka/userRegist.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/ka/userRegistValidate.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/3.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/4.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/img/ii.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/img/iii.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/img/panda.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/img/ti.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/img/tim.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/img/timg (1).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/img/timg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/ritenu/02_ritennuhomework/lol01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/ritenu/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/tmphomework/jQuery/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/tmphomework/jquerycheck.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/tmphomework/jquerycheck02_gototo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/tmphomework/jqueyclac.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/tmphomework/upload/do_upload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/tmphomework/upload/images/02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/tmphomework/upload/images/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/tmphomework/upload/images/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/homework/tmphomework/upload/upload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/dishu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hamer1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/hamer2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/monster5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery-3.3.1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jsonData.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/no_egg_use.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sound/hit.ogg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uselessSeries/clac/03_gototo_clac.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uselessSeries/clac/calculator_ri.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uselessSeries/clac/teacher_clac_1+2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uselessSeries/hitDishu/hitDishu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uselessSeries/marry/can_marry.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uselessSeries/meiluanyongmoney_gototo.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uselessSeries/monster.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uselessSeries/php_little_game/roll_point.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uselessSeries/php_little_game/touzi.jpeg" beforeDir="false" />
+    </list>
     <ignored path="C:\Programming\phpWorkspace\yukainaotakus\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,12 +80,33 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="hitDishu.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/uselessSeries/hitDishu/hitDishu.html">
+    <leaf>
+      <file leaf-file-name="core.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Config/core.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-146">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="191">
+              <caret line="285" column="33" lean-forward="true" selection-start-line="285" selection-start-column="33" selection-end-line="285" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ziwojieshao.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/webroot/old/homework/gokoyoku/ziwojieshao/ziwojieshao.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-38">
+              <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Config/database.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="75" column="23" lean-forward="true" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -37,6 +117,11 @@
     <findStrings>
       <find>$_SESSION</find>
       <find>col-sm</find>
+      <find>Security.salt</find>
+      <find>datasource</find>
+      <find>zone</find>
+      <find>&lt;head</find>
+      <find>&lt;/head</find>
     </findStrings>
     <replaceStrings>
       <replace>col-md</replace>
@@ -47,7 +132,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="textDelete" />
+        <entry key="$PROJECT_DIR$" value="v_1_x" />
       </map>
     </option>
   </component>
@@ -76,6 +161,9 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/homework/tmphomework/jquerycheck02_gototo.html" />
         <option value="$PROJECT_DIR$/uselessSeries/hitDishu/hitDishu.html" />
+        <option value="$PROJECT_DIR$/app/Config/database.php" />
+        <option value="$PROJECT_DIR$/app/Config/core.php" />
+        <option value="$PROJECT_DIR$/app/webroot/old/homework/gokoyoku/ziwojieshao/ziwojieshao.php" />
       </list>
     </option>
   </component>
@@ -94,17 +182,18 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-1553" />
-    <option name="y" value="22" />
-    <option name="width" value="1408" />
-    <option name="height" value="970" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-1929" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1060" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -115,28 +204,63 @@
             <path>
               <item name="yukainaotakus" type="b2602c69:ProjectViewProjectNode" />
               <item name="yukainaotakus" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="yukainaotakus" type="b2602c69:ProjectViewProjectNode" />
               <item name="yukainaotakus" type="462c0819:PsiDirectoryNode" />
-              <item name="sound" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="yukainaotakus" type="b2602c69:ProjectViewProjectNode" />
               <item name="yukainaotakus" type="462c0819:PsiDirectoryNode" />
-              <item name="uselessSeries" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="webroot" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yukainaotakus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yukainaotakus" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="webroot" type="462c0819:PsiDirectoryNode" />
+              <item name="old" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yukainaotakus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yukainaotakus" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="webroot" type="462c0819:PsiDirectoryNode" />
+              <item name="old" type="462c0819:PsiDirectoryNode" />
+              <item name="homework" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yukainaotakus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yukainaotakus" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="webroot" type="462c0819:PsiDirectoryNode" />
+              <item name="old" type="462c0819:PsiDirectoryNode" />
+              <item name="homework" type="462c0819:PsiDirectoryNode" />
+              <item name="gokoyoku" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yukainaotakus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yukainaotakus" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="webroot" type="462c0819:PsiDirectoryNode" />
+              <item name="old" type="462c0819:PsiDirectoryNode" />
+              <item name="homework" type="462c0819:PsiDirectoryNode" />
+              <item name="gokoyoku" type="462c0819:PsiDirectoryNode" />
+              <item name="ziwojieshao" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="步骤7:不存在数据,执行增加&#9;null&#9;null&#10;common&#9;FILE&#9;file://C:/Programming/phpWorkspace/yukainaotakus/View/common_header.php" />
+    <property name="SearchEverywhereHistoryKey" value="ziwojieshao&#9;FILE&#9;file://C:/Programming/phpWorkspace/yukainaotakus/app/webroot/old/homework/gokoyoku/ziwojieshao/ziwojieshao.php&#10;database.php&#9;FILE&#9;file://C:/Programming/phpWorkspace/yukainaotakus/app/Config/database.php.default&#10;core.php&#9;FILE&#9;file://C:/Programming/phpWorkspace/yukainaotakus/app/Config/core.php&#10;步骤7:不存在数据,执行增加&#9;null&#9;null&#10;common&#9;FILE&#9;file://C:/Programming/phpWorkspace/yukainaotakus/View/common_header.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -144,19 +268,19 @@
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Programming\phpWorkspace\yukainaotakus\app\Config" />
+      <recent name="C:\Programming\phpWorkspace\yukainaotakus\sound" />
+      <recent name="C:\Programming\phpWorkspace\yukainaotakus\images" />
+      <recent name="C:\Programming\phpWorkspace\yukainaotakus\uselessSeries" />
+      <recent name="C:\Programming\phpWorkspace\yukainaotakus\js" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Programming\phpWorkspace\yukainaotakus\images" />
       <recent name="C:\Programming\phpWorkspace\yukainaotakus\uselessSeries\hitDishu" />
       <recent name="C:\Programming\phpWorkspace\yukainaotakus\uselessSeries" />
       <recent name="C:\Programming\phpWorkspace\yukainaotakus" />
       <recent name="C:\Programming\phpWorkspace\yukainaotakus\homework\ritenu" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Programming\phpWorkspace\yukainaotakus\sound" />
-      <recent name="C:\Programming\phpWorkspace\yukainaotakus\images" />
-      <recent name="C:\Programming\phpWorkspace\yukainaotakus\uselessSeries" />
-      <recent name="C:\Programming\phpWorkspace\yukainaotakus\js" />
-      <recent name="C:\Programming\phpWorkspace\yukainaotakus" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -200,6 +324,7 @@
       <workItem from="1542159795485" duration="4907000" />
       <workItem from="1542328771797" duration="853000" />
       <workItem from="1542330207873" duration="10606000" />
+      <workItem from="1542784964178" duration="1809000" />
     </task>
     <task id="LOCAL-00001" summary="#1 画面】创建一个主页">
       <created>1538717680859</created>
@@ -243,32 +368,40 @@
       <option name="project" value="LOCAL" />
       <updated>1542011322461</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="#11 没用系列之：Monster">
+      <created>1542785120725</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1542785120725</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88184000" />
+    <option name="totallyTimeSpent" value="89993000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="104" y="176" width="1125" height="776" extended-state="0" />
+    <frame x="-1927" y="-7" width="1550" height="848" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23943663" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50281423" side_tool="true" weight="0.43005952" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="File Transfer" order="8" weight="0.07591934" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.3" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="File Transfer" order="8" weight="0.32589287" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49718574" weight="0.7781109" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.328125" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24832214" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.3299566" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -293,34 +426,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/homework/ritenu/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="28" column="43" lean-forward="true" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homework/ka/userRegist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="50" column="17" lean-forward="true" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/homework/ka/userRegist.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/homework/ka/userRegistValidate.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="765">
@@ -543,8 +648,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/uselessSeries/hitDishu/hitDishu.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-146">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="544">
+          <caret line="33" column="16" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Config/database.php.default">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="3" lean-forward="true" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="75" column="23" lean-forward="true" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Config/core.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="285" column="33" lean-forward="true" selection-start-line="285" selection-start-column="33" selection-end-line="285" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/old/homework/gokoyoku/ziwojieshao/ziwojieshao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-38">
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
