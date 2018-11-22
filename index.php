@@ -1,28 +1,41 @@
 <?php
-$display['title'] = "主页";
-?>
+/**
+ * Requests collector.
+ *
+ *  This file collects requests if:
+ *	- no mod_rewrite is available or .htaccess files are not supported
+ *  - requires App.baseUrl to be uncommented in app/Config/core.php
+ *	- app/webroot is not set as a document root.
+ *
+ * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
+ * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ * @link          https://cakephp.org CakePHP(tm) Project
+ * @since         CakePHP(tm) v 0.2.9
+ * @license       https://opensource.org/licenses/mit-license.php MIT License
+ */
 
-<?php include 'View/common_header.php';// 引用共通部品：头部?>
+/**
+ *  Get CakePHP's root directory
+ */
+define('APP_DIR', 'app');
+define('DS', DIRECTORY_SEPARATOR);
+define('ROOT', dirname(__FILE__));
+define('WEBROOT_DIR', 'webroot');
+define('WWW_ROOT', ROOT . DS . APP_DIR . DS . WEBROOT_DIR . DS);
 
-<div class="container-fluid" style="min-height:600px;">
-    <div class="row">
-        <div class="col-sm-12">
-            <ul>
-                <li><a href="homework/gototo">gototo</a></li>
-                <li><a href="homework/gokoyoku">gokoyoku</a></li>
-                <li><a href="homework/ritenu">ritenu</a></li>
-                <li><a href="homework/ka">课内代码</a></li>
-                <li><a href="no_egg_use.php">没软用系列</a></li>
-                <li><a href="jsonData.txt">json数据</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+/**
+ * This only needs to be changed if the "cake" directory is located
+ * outside of the distributed structure.
+ * Full path to the directory containing "cake". Do not add trailing directory separator
+ */
+if (!defined('CAKE_CORE_INCLUDE_PATH')) {
+	define('CAKE_CORE_INCLUDE_PATH', ROOT . DS . 'lib');
+}
 
-<div class="row" style="height:500px;">
-    <!--            <div class="col-sm-6" style="background-color:#c9b6e7;">板块1</div>-->
-    <!--            <div class="col-sm-6" style="background-color:#d0e6ff;">板块2</div>-->
-</div>
-
-<?php include 'View/common_footer.php';// 引用共通部品：脚步?>
+require APP_DIR . DS . WEBROOT_DIR . DS . 'index.php';
