@@ -1,0 +1,68 @@
+
+<!DOCTYPE HTML>
+
+
+<html>
+<head>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta charset="utf-8">
+
+                <title></title>
+<script src="jQuery/js/jquery.min.js"></script>
+
+
+<script>
+    var name="";
+    var des="";
+
+$(function(){
+    $("#new").click(function(){
+      $("img").attr("src","upload/images/1.jpg"); 
+      $("img").attr("title","描述1"); 
+      $("#des").html( $("img").attr("title"));
+    });
+    
+    $("#old").click(function(){
+      $("img").attr("src","upload/images/02.jpg"); 
+      $("img").attr("title","描述2"); 
+      $("#des").html( $("img").attr("title"));
+    })
+
+
+
+
+ });
+
+</script>
+
+
+
+
+</head>
+
+
+
+
+<body>
+
+<form>
+<p>game mode</p>
+
+<input id="new" type="radio" checked="checked" name="mode"/>新手
+<input id="old" type="radio" name="mode"/>老司机
+</form>
+
+<br>
+<span id="img"><img src="upload/images/1.jpg" title="描述1"></span>
+
+<br><span id="des">描述1</span>
+
+
+
+
+
+
+</body>
+</html>
