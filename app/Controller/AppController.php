@@ -30,5 +30,46 @@ App::uses('Controller', 'Controller');
  * @package		app.Controller
  * @link		https://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
+
+// class AppController extends Controller {
+//     public $components = array('DebugKit.Toolbar');
+
+// }
+
 class AppController extends Controller {
+    //...
+
+    public $components = array(
+        'Flash',
+        'Auth' => array(
+            'loginRedirect' => array(
+                'controller' => 'posts',
+                'action' => 'index'
+            ),
+            'logoutRedirect' => array(
+                'controller' => 'pages',
+                'action' => 'display',
+                'home'
+            ),
+            'authenticate' => array(
+                'Form' => array(
+                    'passwordHasher' => 'Blowfish'
+                )
+            )
+        )
+    );
+    public function isAuthorized($user) {
+        // Admin 可以访问每个动作
+        if (isset($user['role']) && $user['role'] === 'admin') {
+            return true;
+        }
+    
+        // 默认不允许访问
+        return false;
+    }
+
+    public function beforeFilter() {
+        $this->Auth->allow('index', 'view');
+    }
+    //...
 }
