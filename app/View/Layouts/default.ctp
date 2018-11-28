@@ -92,7 +92,9 @@
 
 
 			<li class="nav-item">
-			<?php echo $this->Html->link(
+			<?php if(!empty($_SESSION['Auth']['User']['username'])){echo "您好".$_SESSION['Auth']['User']['username']."!";
+			}else{
+			echo $this->Html->link(
 				'点我注册', 
 				[
 				'controller' => 'Users',
@@ -102,7 +104,7 @@
 						'class'=>'nav-link',
 						
 					]
-					); ?>
+					);} ?>
 
 			</li>
 
