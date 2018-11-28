@@ -23,7 +23,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">首页</a>
+  <a class="navbar-brand" href="#">导航器</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -36,8 +36,8 @@
         		<?php echo $this->Html->link(
 					'新增monster',
 					[
-						'controller'=>'monster',
-						'action' => 'do_add_monster.php'  //修改新增monster的地址
+						'Controller'=>'Monsters',
+						'action' => 'add'  //修改新增monster的地址
 					],
 					[
 						'class'=>'nav-link',
@@ -50,60 +50,10 @@
 	  <li class="nav-item">
      
 
-        		<?php echo $this->Html->link(
-					'查看monster',
-					[
-						'controller'=>'monster',
-						'action' => ' view_monster.php'  //修改查看monster的地址
-					],
-					[
-						'class'=>'nav-link',
-						
-					]
-					);
-			?>
-
-
-					<li class="nav-item">
-						
-
-						<?php echo $this->Html->link(
-							'修改monster',
-							[
-								'controller'=>'monster',
-								'action' => '  '  //修改monster的地址
-							],
-							[
-								'class'=>'nav-link',
-								
-							]
-							);
-					?>
-					</li>
-
-
-
-			<li class="nav-item">
-     
-
-        		<?php echo $this->Html->link(
-					'新增monster',
-					[
-						'controller'=>'Posts',
-						'action' => ' updata_monster.php '  //修改新增monster的地址
-					],
-					[
-						'class'=>'nav-link',
-						
-					]
-					);
-			?>
-      </li>
-      </li>
       <?php echo $this->Html->link(
 					'返回主页',
 					[
-						'controller'=>'Posts',
+						'controller'=>'Monsters',
 						'action' => 'index'
 					],
 					[
