@@ -18,7 +18,7 @@ class Monster extends AppModel {
            'm_level' => array(
                'rule' => 'notBlank'
            ),
-           'adress' => array(
+           'address' => array(
                'rule' => 'notBlank'
            )
          
