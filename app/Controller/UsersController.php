@@ -1,4 +1,5 @@
 <?php
+session_start();
 App::uses('AppController', 'Controller');
 
 class UsersController extends AppController {
@@ -11,10 +12,12 @@ class UsersController extends AppController {
     public function login() {
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
+
                 return $this->redirect($this->Auth->redirectUrl());
             } else {
 				$this->Flash->error(__('用户名或者密码有误，请重新输入'));
 			}
+
         }
     }   
 
