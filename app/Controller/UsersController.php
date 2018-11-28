@@ -12,8 +12,9 @@ class UsersController extends AppController {
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
                 return $this->redirect($this->Auth->redirectUrl());
-            }
-            $this->Flash->error(__('用户名或者密码有误，请重新输入'));
+            } else {
+				$this->Flash->error(__('用户名或者密码有误，请重新输入'));
+			}
         }
     }   
 
