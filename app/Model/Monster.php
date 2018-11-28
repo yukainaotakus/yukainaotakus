@@ -1,7 +1,7 @@
 <?php 
 class Monster extends AppModel {
 
-     // public $useTable = 'monsters';
+     public $useTable = 'monsters';
 
      public $primaryKey = 'mno';
 
