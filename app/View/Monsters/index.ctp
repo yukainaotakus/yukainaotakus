@@ -13,7 +13,7 @@ $('#out').click(function(){
     alert("您已退出登录");
 }); 
 
-</script>        -->
+
 <table> 
     <tr>
         <th>编号</th>
@@ -51,8 +51,12 @@ array('controller' => 'Monsters', 'action' => 'view', $Monster['Monster']['mno']
         <td><?php echo $Monster['Monster']['atk']; ?></td>
     </tr>
     <?php endforeach; ?>
-    <?php unset($Monster); ?>
+
+    <?php unset($Monster);
+
+    ?>
 </table>
+
 
 <?php
 // echo "<pre>";
@@ -60,3 +64,4 @@ array('controller' => 'Monsters', 'action' => 'view', $Monster['Monster']['mno']
 // //$_SESSION['Auth']['User']['username']
 // echo "</pre>";
 ?>
+
