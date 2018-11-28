@@ -1,6 +1,7 @@
 <!-- File: /app/View/Monsters/view.ctp -->
 <?php 
 // debug($monsterList);
+
 ?>
 
 <h1><?php echo h($monsterList['Monster']['mno']); ?></h1>
