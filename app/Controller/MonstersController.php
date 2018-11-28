@@ -1,19 +1,20 @@
-
-
 <?php
-
-
 class MonstersController extends AppController {
 
-
-
     public $helpers = array('Html', 'Form');
+    public $components = array('Auth');
+
+    // 要求载入其他模型
+//    public $uses = array('Post');
+
     public function index() {
         $this->set('monsters', $this->Monster->find('all'));
-       // $this->set('monsters', $this->Monster->find('all'));
-        
-        //$this->Article->find('all');
-    
+
+        $this->loadModel("Post");
+
+		$this->set('postList', $this->Post->find('all'));
+
+
     }
 
     public function view($mno = null) {

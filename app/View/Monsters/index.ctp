@@ -14,6 +14,7 @@ $('#out').click(function(){
     alert("您已退出登录");
 }); 
 
+
 </script>       
 <table> 
     <tr>
@@ -52,5 +53,7 @@ array('controller' => 'Monsters', 'action' => 'view', $Monster['Monster']['mno']
         <td><?php echo $Monster['Monster']['atk']; ?></td>
     </tr>
     <?php endforeach; ?>
-    <?php unset($Monster); ?>
+    <?php unset($Monster);
+
+    ?>
 </table>

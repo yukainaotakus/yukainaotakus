@@ -7,7 +7,7 @@ echo $this->Form->create('Monster');
 echo $this->Form->input('type');
 echo $this->Form->input('m_name');
 echo $this->Form->input('m_level');
-echo $this->Form->input('adress');
+echo $this->Form->input('address');
 echo $this->Form->input('atk');
 
 
