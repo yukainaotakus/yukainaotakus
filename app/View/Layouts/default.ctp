@@ -7,7 +7,7 @@
 		
 		<?php echo $this->fetch('title'); ?>
 	</title>
-	<?php
+	<?php 
 
 		
 		echo $this->Html->meta('icon');
@@ -63,6 +63,48 @@
 					);
 			?>
       </li>
+			
+			<li class="nav-item">
+			<?php 
+			if(!empty($_SESSION['Auth']['User']['username'])){
+				echo $this->Html->link("退出登录", ['controller' => 'Users',
+                        'action' =>'logout'],[
+													'class'=>'nav-link',
+													
+												] );
+
+
+			}else{
+			echo $this->Html->link("点我登录", [ 'controller' => 'Users',
+												'action' =>'login'],[
+													'class'=>'nav-link',
+													
+												]);}
+												
+												?>
+
+
+			 </li>
+
+
+
+
+
+
+			<li class="nav-item">
+			<?php echo $this->Html->link(
+				'点我注册', 
+				[
+				'controller' => 'Users',
+							'action' =>'add'
+					],
+					[
+						'class'=>'nav-link',
+						
+					]
+					); ?>
+
+			</li>
 
     </ul>
   </div>

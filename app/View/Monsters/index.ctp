@@ -2,19 +2,18 @@
 
 <h1>怪物列表</h1>
 
-<button><?php echo $this->Html->link("点我注册", array( 'controller' => 'Users',
-                        'action' =>'add')); ?></button>
-<!-- <a href="users/add" ><button type="button" class="btn btn-primary" >点我注册 </button></a> -->
-<button><?php echo $this->Html->link("点我登录", array( 'controller' => 'Users',
-                        'action' =>'login')); ?></button>
-<button id='out'><?php echo $this->Html->link("退出登录", array( 'controller' => 'Users',
-                        'action' =>'logout')); ?></button>
-<script>
+<!-- <button><?php //echo $this->Html->link("点我注册", array( 'controller' => 'Users',
+                  //      'action' =>'add')); ?></button>
+<button><?php //echo $this->Html->link("点我登录", array( 'controller' => 'Users',
+                      //  'action' =>'login')); ?></button>
+<button id='out'><?php // echo $this->Html->link("退出登录", array( 'controller' => 'Users',
+                       // 'action' =>'logout')); ?></button> -->
+<!-- <script>
 $('#out').click(function(){
     alert("您已退出登录");
 }); 
 
-</script>       
+</script>        -->
 <table> 
     <tr>
         <th>编号</th>
@@ -54,3 +53,10 @@ array('controller' => 'Monsters', 'action' => 'view', $Monster['Monster']['mno']
     <?php endforeach; ?>
     <?php unset($Monster); ?>
 </table>
+
+<?php
+// echo "<pre>";
+// print_r($_SESSION['Auth']['User'])  ;
+// //$_SESSION['Auth']['User']['username']
+// echo "</pre>";
+?>
