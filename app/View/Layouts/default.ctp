@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php echo $this->Html->charset(); ?>
+	<?php echo $this->Html->charset(); 
+	?>
 	<title>monster |-|
 		
 		<?php echo $this->fetch('title'); ?>
@@ -82,10 +83,6 @@
 			 </li>
 
 
-
-
-
-
 			<li class="nav-item">
 			<?php if(!empty($this->Session->read('Auth.User.username'))){
 			}else{
@@ -103,20 +100,30 @@
 
 			</li>
 
-			<li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		<?php if(!empty($this->Session->read('Auth.User.username'))){echo "您好".$this->Session->read('Auth.User.username')."!";
-			}else{}  ?>
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#"><?php if(!empty($this->Session->read('Auth.User.username'))){
-				echo "查看个人信息";}?></a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#"><?php if(!empty($this->Session->read('Auth.User.username'))){
-				echo $this->Html->link("退出登录", ['controller' => 'Users',
-                        'action' =>'logout']);}?></a>
-        </div>
-      </li>
+		
+	  <li>
+	  <?php if(!empty($this->Session->read('Auth.User.username'))){
+		  echo "<div class='btn-group'>
+		  <button type='button' class='btn btn-secondary dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>"."您好".$this->Session->read('Auth.User.username').
+			"</button>
+		  <div class='dropdown-menu'>
+			<a class='dropdown-item' href='#'>"."查看个人信息"."</a>"."<div class='dropdown-divider'></div>";
+			echo $this->Html->link(
+				'退出登录',['controller' => 'Users',
+					'action' =>'logout'] ,
+				array('class' => 'dropdown-item')
+			); }else{}
+
+
+		// 	<div class='dropdown-divider'></div>
+		// 	<a class='dropdown-item'>".$this->Html->link('退出登录',array('class' => 'dropdown-divider'),['controller' => 'Users',
+		// 	'action' =>'logout'])."</a>
+		//   </div>
+		// </div>";
+	 
+	 
+	  ?>
+	  </li>
 
 
     </ul>

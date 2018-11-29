@@ -45,5 +45,5 @@
 // print_r($_SESSION)  ;
 // //$_SESSION['Auth']['User']['username']
 // echo "</pre>";
-echo "我是用户".$uname = $this->Session->read('Auth.User.username')." id是".$uid = $this->Session->read('Auth.User.id')
+//echo "我是用户".$uname = $this->Session->read('Auth.User.username')." id是".$uid = $this->Session->read('Auth.User.id')
 ?>
