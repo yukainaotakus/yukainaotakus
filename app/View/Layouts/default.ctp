@@ -34,10 +34,10 @@
      
 
         		<?php echo $this->Html->link(
-					'新增monster',
+					'新增游戏信息',
 					[
-						'Controller'=>'Monsters',
-						'action' => 'add'  //修改新增monster的地址
+						'Controller'=>'GameInfo',
+						'action' => 'add'  //修改新增的地址
 					],
 					[
 						'class'=>'nav-link',
@@ -53,7 +53,7 @@
       <?php echo $this->Html->link(
 					'返回主页',
 					[
-						'controller'=>'Monsters',
+						'controller'=>'GameInfo',
 						'action' => 'index'
 					],
 					[
@@ -66,13 +66,8 @@
 			
 			<li class="nav-item">
 			<?php 
-			if(!empty($_SESSION['Auth']['User']['username'])){
-				echo $this->Html->link("退出登录", ['controller' => 'Users',
-                        'action' =>'logout'],[
-													'class'=>'nav-link',
-													
-												] );
-
+			if(!empty($this->Session->read('Auth.User.username'))){
+				// echo "";
 
 			}else{
 			echo $this->Html->link("点我登录", [ 'controller' => 'Users',
@@ -92,7 +87,7 @@
 
 
 			<li class="nav-item">
-			<?php if(!empty($_SESSION['Auth']['User']['username'])){echo "您好".$_SESSION['Auth']['User']['username']."!";
+			<?php if(!empty($this->Session->read('Auth.User.username'))){
 			}else{
 			echo $this->Html->link(
 				'点我注册', 
@@ -108,9 +103,26 @@
 
 			</li>
 
+			<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<?php if(!empty($this->Session->read('Auth.User.username'))){echo "您好".$this->Session->read('Auth.User.username')."!";
+			}else{}  ?>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#"><?php if(!empty($this->Session->read('Auth.User.username'))){
+				echo "查看个人信息";}?></a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#"><?php if(!empty($this->Session->read('Auth.User.username'))){
+				echo $this->Html->link("退出登录", ['controller' => 'Users',
+                        'action' =>'logout']);}?></a>
+        </div>
+      </li>
+
+
     </ul>
   </div>
 </nav>
+
 
 
 			<?php echo $this->element('common/header');?>

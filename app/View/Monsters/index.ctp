@@ -22,7 +22,7 @@ $('#out').click(function(){
         <th>攻击力</th>
     </tr>
 
-    <!-- Here is where we loop through our $Monsters array, printing out Monster info -->
+  
 <?php 
     
 ?>

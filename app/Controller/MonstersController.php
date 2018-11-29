@@ -1,21 +1,17 @@
+
 <?php
 
 class MonstersController extends AppController {
 
+
+
     public $helpers = array('Html', 'Form');
-    public $components = array('Auth');
-
-    // 要求载入其他模型
-//    public $uses = array('Post');
-
     public function index() {
         $this->set('monsters', $this->Monster->find('all'));
-
-        $this->loadModel("Post");
-
-		$this->set('postList', $this->Post->find('all'));
-
-
+       // $this->set('monsters', $this->Monster->find('all'));
+        
+        //$this->Article->find('all');
+    
     }
 
     public function view($mno = null) {
@@ -96,8 +92,8 @@ class MonstersController extends AppController {
     
         // 文章的所有者能够编辑和删除它
         if (in_array($this->action, array('edit', 'delete'))) {
-            $postId = (int) $this->request->params['pass'][0];
-            if ($this->Post->isOwnedBy($postId, $user['id'])) {
+            $mno = (int) $this->request->params['pass'][0];
+            if ($this->Monster->isOwnedBy($mno, $user['id'])) {
                 return true;
             }
         }
