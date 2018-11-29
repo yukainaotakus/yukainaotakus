@@ -3,7 +3,7 @@
 <?php  echo $this->Form->create('User'); ?>
     <fieldset>
         <legend><?php
-        if(!empty($_SESSION['Auth']['User']['username'])){echo "您已经是本站会员了，请勿重复注册";
+        if(!empty($this->Session->read('Auth.User.username'))){echo "您已经是本站会员了，请勿重复注册";
             }else{echo __('注册新用户');} 
             
             ?></legend>

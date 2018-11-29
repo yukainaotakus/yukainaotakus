@@ -1,9 +1,9 @@
 <?php
-session_start();
 App::uses('AppController', 'Controller');
 
 class UsersController extends AppController {
 
+ 
     public function beforeFilter() {
         parent::beforeFilter();
         $this->Auth->allow('add', 'logout');
@@ -12,12 +12,11 @@ class UsersController extends AppController {
     public function login() {
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
-
-                return $this->redirect($this->Auth->redirectUrl());
-            } else {
-				$this->Flash->error(__('用户名或者密码有误，请重新输入'));
-			}
-
+              
+                return $this->redirect(array('action' => 'index'));
+                //return $this->redirect($this->Auth->redirectUrl());
+            }
+            $this->Flash->error(__('用户名或者密码有误，请重新输入'));
         }
     }   
 
@@ -33,7 +32,7 @@ class UsersController extends AppController {
     public function view($id = null) {
         $this->User->id = $id;
         if (!$this->User->exists()) {
-            throw new NotFoundException(__('Invalid user'));
+            throw new NotFoundException(__('无效数据'));
         }
         $this->set('user', $this->User->findById($id));
     }
@@ -54,15 +53,15 @@ class UsersController extends AppController {
     public function edit($id = null) {
         $this->User->id = $id;
         if (!$this->User->exists()) {
-            throw new NotFoundException(__('Invalid user'));
+            throw new NotFoundException(__('无效数据'));
         }
         if ($this->request->is('post') || $this->request->is('put')) {
             if ($this->User->save($this->request->data)) {
-                $this->Flash->success(__('The user has been saved'));
+                $this->Flash->success(__('用户已存在'));
                 return $this->redirect(array('action' => 'index'));
             }
             $this->Flash->error(
-                __('The user could not be saved. Please, try again.')
+                __('失败，请重试')
             );
         } else {
             $this->request->data = $this->User->findById($id);
