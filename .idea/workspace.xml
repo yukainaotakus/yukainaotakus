@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a63ae102-2f05-489a-adf4-387ec8f52579" name="#7 【基础构建】" comment="#17 使用cakePHP重组项目">
-      <change afterPath="$PROJECT_DIR$/DDL/DB-01_game_info_v_1.1.sql" afterDir="false" />
+    <list default="true" id="a63ae102-2f05-489a-adf4-387ec8f52579" name="#7 【基础构建】" comment="#33 完善GameInfo模块">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Config/routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Config/routes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controller/MonstersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controller/MonstersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Controller/UsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controller/UsersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/Monsters/index.ctp" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Monsters/index.ctp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDL/DB-01_game_info_v_1.1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DDL/DB-01_game_info_v_1.1.sql" afterDir="false" />
     </list>
     <list id="f4323673-3576-4383-b903-9ace9abc67aa" name="Default" comment="" />
     <ignored path="C:\Programming\phpWorkspace\yukainaotakus\.idea\shelf/" />
@@ -63,8 +58,8 @@
       <file leaf-file-name="index.ctp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/View/GameInfo/index.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+            <state relative-caret-position="217">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -72,8 +67,8 @@
       <file leaf-file-name="DB-01_game_info_v_1.1.sql" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DDL/DB-01_game_info_v_1.1.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+            <state relative-caret-position="68">
+              <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -178,8 +173,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-3479" />
-    <option name="y" value="166" />
+    <option name="x" value="-3797" />
+    <option name="y" value="147" />
     <option name="width" value="1542" />
     <option name="height" value="917" />
   </component>
@@ -195,6 +190,11 @@
             <path>
               <item name="yukainaotakus" type="b2602c69:ProjectViewProjectNode" />
               <item name="yukainaotakus" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yukainaotakus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yukainaotakus" type="462c0819:PsiDirectoryNode" />
+              <item name="DDL" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -272,7 +272,7 @@
       <workItem from="1542787566441" duration="232000" />
       <workItem from="1543283109944" duration="600000" />
       <workItem from="1543293566837" duration="6131000" />
-      <workItem from="1543382553621" duration="5277000" />
+      <workItem from="1543382553621" duration="6221000" />
     </task>
     <task id="LOCAL-00001" summary="#1 画面】创建一个主页">
       <created>1538717680859</created>
@@ -337,24 +337,31 @@
       <option name="project" value="LOCAL" />
       <updated>1542787277512</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="#33 完善GameInfo模块">
+      <created>1543392329396</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1543392329396</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102931000" />
+    <option name="totallyTimeSpent" value="103875000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-4016" y="101" width="984" height="733" extended-state="0" />
+    <frame x="-3853" y="119" width="1233" height="733" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2835498" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22335891" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50281423" side_tool="true" weight="0.43005952" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="File Transfer" order="8" weight="0.19645494" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49718574" weight="0.4165342" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.49718574" visible="true" weight="0.20985691" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.328125" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -381,7 +388,8 @@
     <MESSAGE value="#11 没用系列之：法律" />
     <MESSAGE value="#11 没用系列之：Monster" />
     <MESSAGE value="#17 使用cakePHP重组项目" />
-    <option name="LAST_COMMIT_MESSAGE" value="#17 使用cakePHP重组项目" />
+    <MESSAGE value="#33 完善GameInfo模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="#33 完善GameInfo模块" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -537,15 +545,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/View/GameInfo/index.ctp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        <state relative-caret-position="217">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DDL/DB-01_game_info_v_1.1.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+        <state relative-caret-position="68">
+          <caret line="4" column="47" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
         </state>
       </provider>
     </entry>

@@ -1,20 +1,17 @@
+
 <?php
+
 class MonstersController extends AppController {
 
+
+
     public $helpers = array('Html', 'Form');
-    public $components = array('Auth');
-
-    // 要求载入其他模型
-//    public $uses = array('Post');
-
     public function index() {
         $this->set('monsters', $this->Monster->find('all'));
-
-        $this->loadModel("Post");
-
-		$this->set('postList', $this->Post->find('all'));
-
-
+       // $this->set('monsters', $this->Monster->find('all'));
+        
+        //$this->Article->find('all');
+    
     }
 
     public function view($mno = null) {
@@ -32,6 +29,8 @@ class MonstersController extends AppController {
 
     public function add() {
         if ($this->request->is('Post')) {
+            $this->request->data['Post']['user_id'] = $this->Auth->user('id');
+           
             $this->Monster->create();
             if ($this->Monster->save($this->request->data)) {
                 $this->Flash->success(__('你增加了一个新怪物'));
@@ -84,6 +83,24 @@ class MonstersController extends AppController {
     
         return $this->redirect(array('action' => 'index'));
     }
+
+    public function isAuthorized($user) {
+        // 所有注册的用户都能够添加文章
+        if ($this->action === 'add') {
+            return true;
+        }
+    
+        // 文章的所有者能够编辑和删除它
+        if (in_array($this->action, array('edit', 'delete'))) {
+            $mno = (int) $this->request->params['pass'][0];
+            if ($this->Monster->isOwnedBy($mno, $user['id'])) {
+                return true;
+            }
+        }
+    
+        return parent::isAuthorized($user);
+    }
+
 
 
 

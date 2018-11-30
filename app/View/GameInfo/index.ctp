@@ -18,6 +18,16 @@
         <th>游戏平台</th>
         <th>游戏价格</th>
     </tr>
+    <?php echo $this->Html->link(
+    'Add Post',
+    array('controller' => 'GameInfo', 'action' => 'add')
+); ?>
+
+
+
+
+
+
 
     <!-- Here is where we loop through our $Monsters array, printing out Monster info -->
 <?php
@@ -34,7 +44,33 @@
 <td><?php echo $GameInfo['GameInfo']['platform']; ?></td>
 <td><?php echo $GameInfo['GameInfo']['price']; ?></td>
 
-
+	<td>
+            <?php
+                echo $this->Html->link(
+                    '查看',
+                    array('action' => 'view', $GameInfo['GameInfo']['id'])
+                );
+            ?>
+        </td>
+        <td>
+            <?php
+                echo $this->Html->link(
+                    '编辑',
+                    array('action' => 'edit', $GameInfo['GameInfo']['id'])
+                );
+            ?>
+        </td>
+        <td>
+            <?php
+                echo $this->Form->postLink(
+                    'Delete',
+                    array('action' => 'delete', $GameInfo['GameInfo']['id']),
+                    array('confirm' => 'Are you sure?')
+                );
+            ?>
+         
+        </td>
+       
     </tr>
     <?php endforeach; ?>
     
