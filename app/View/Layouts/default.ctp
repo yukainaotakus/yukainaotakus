@@ -2,12 +2,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php echo $this->Html->charset(); ?>
+	<?php echo $this->Html->charset(); 
+	?>
 	<title>monster |-|
 		
 		<?php echo $this->fetch('title'); ?>
 	</title>
-	<?php
+	<?php 
 
 		
 		echo $this->Html->meta('icon');
@@ -23,7 +24,11 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">导航器</a>
+  <a class="navbar-brand" href="#"><?php echo $this->Html->link("Yukainaotakus", [ 'controller' => 'GameInfo',
+												'action' =>'index'],[
+													'class'=>'navbar-brand',
+													
+												] ); ?> </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -31,42 +36,89 @@
     <ul class="navbar-nav">
 
       <li class="nav-item">
-     
-
-        		<?php echo $this->Html->link(
-					'新增monster',
+				<?php if(!empty($this->Session->read('Auth.User.username'))){
+				echo $this->Html->link(
+					'新增游戏信息',
 					[
-						'Controller'=>'Monsters',
-						'action' => 'add'  //修改新增monster的地址
+						'Controller'=>'GameInfo',
+						'action' => 'add'  //修改新增的地址
 					],
 					[
 						'class'=>'nav-link',
 						
 					]
-					);
+					);}
 			?>
       </li>
+	</ul>
 
-	  <li class="nav-item">
-     
+			
+	 <ul class="navbar-nav ml-auto">
+			<li class="nav-item">
+			<?php 
+			if(!empty($this->Session->read('Auth.User.username'))){
+				// echo "";
 
-      <?php echo $this->Html->link(
-					'返回主页',
-					[
-						'controller'=>'Monsters',
-						'action' => 'index'
+			}else{
+			echo $this->Html->link("点我登录", [ 'controller' => 'Users',
+												'action' =>'login'],[
+													'class'=>'nav-link',
+													
+												]);}
+												
+												?>
+
+
+			 </li>
+
+
+			<li class="nav-item">
+			<?php if(!empty($this->Session->read('Auth.User.username'))){
+			}else{
+			echo $this->Html->link(
+				'点我注册', 
+				[
+				'controller' => 'Users',
+							'action' =>'add'
 					],
 					[
 						'class'=>'nav-link',
 						
 					]
-					);
-			?>
-      </li>
+					);} ?>
+
+			</li>
+		
+		
+		  	<li>
+	  		<?php if(!empty($this->Session->read('Auth.User.username'))){
+		 		 echo "<div class='btn-group'>
+		 			 <button type='button' class='btn btn-secondary dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>"."您好".$this->Session->read('Auth.User.username').
+						"</button>
+						  <div class='dropdown-menu'>
+						<a class='dropdown-item' href='#'>"."查看个人信息"."</a>"."<div class='dropdown-divider'></div>";
+						echo $this->Html->link(
+						'退出登录',['controller' => 'Users',
+							'action' =>'logout'] ,
+						array('class' => 'dropdown-item')
+					); }else{}
+
+
+		// 	<div class='dropdown-divider'></div>
+		// 	<a class='dropdown-item'>".$this->Html->link('退出登录',array('class' => 'dropdown-divider'),['controller' => 'Users',
+		// 	'action' =>'logout'])."</a>
+		//   </div>
+		// </div>";
+	 
+	 
+	  ?>
+	  </li>
+
 
     </ul>
   </div>
 </nav>
+
 
 
 			<?php echo $this->element('common/header');?>

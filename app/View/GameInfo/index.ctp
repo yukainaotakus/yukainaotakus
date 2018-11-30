@@ -20,8 +20,7 @@
     </tr>
 
     <!-- Here is where we loop through our $Monsters array, printing out Monster info -->
-<?php
-?>
+
     <?php foreach ($gameinfo as $GameInfo): ?>
     <tr>
 <td><?php echo $GameInfo['GameInfo']['id']; ?></td>
@@ -41,3 +40,10 @@
 
     
 </table>
+<?php
+// echo "<pre>";
+// print_r($_SESSION)  ;
+// //$_SESSION['Auth']['User']['username']
+// echo "</pre>";
+//echo "我是用户".$uname = $this->Session->read('Auth.User.username')." id是".$uid = $this->Session->read('Auth.User.id')
+?>
