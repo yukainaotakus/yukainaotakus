@@ -8,6 +8,7 @@ echo $this->Form->input('game_name');
 echo $this->Form->input('type');
 echo $this->Form->input('release_date');
 echo $this->Form->input('publisher');
+echo $this->Form->input('score');
 echo $this->Form->input('introduction');
 echo $this->Form->input('platform');
 echo $this->Form->input('price');
