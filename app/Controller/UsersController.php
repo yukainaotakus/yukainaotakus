@@ -85,7 +85,7 @@ class UsersController extends AppController {
             throw new NotFoundException(__('Invalid user'));
         }
         if ($this->User->delete()) {
-            $this->Flash->success(__('粘好删除'));
+            $this->Flash->success(__('账号删除'));
             return $this->redirect(array('action' => 'index'));
         }
         $this->Flash->error(__('账号删除失败'));
