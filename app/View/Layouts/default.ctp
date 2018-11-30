@@ -24,7 +24,11 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">导航器</a>
+  <a class="navbar-brand" href="#"><?php echo $this->Html->link("Yukainaotakus", [ 'controller' => 'GameInfo',
+												'action' =>'index'],[
+													'class'=>'navbar-brand',
+													
+												] ); ?> </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -32,9 +36,8 @@
     <ul class="navbar-nav">
 
       <li class="nav-item">
-     
-
-        		<?php echo $this->Html->link(
+				<?php if(!empty($this->Session->read('Auth.User.username'))){
+				echo $this->Html->link(
 					'新增游戏信息',
 					[
 						'Controller'=>'GameInfo',
@@ -44,27 +47,13 @@
 						'class'=>'nav-link',
 						
 					]
-					);
+					);}
 			?>
       </li>
+	</ul>
 
-	  <li class="nav-item">
-     
-
-      <?php echo $this->Html->link(
-					'返回主页',
-					[
-						'controller'=>'GameInfo',
-						'action' => 'index'
-					],
-					[
-						'class'=>'nav-link',
-						
-					]
-					);
-			?>
-      </li>
 			
+	 <ul class="navbar-nav ml-auto">
 			<li class="nav-item">
 			<?php 
 			if(!empty($this->Session->read('Auth.User.username'))){
@@ -99,20 +88,20 @@
 					);} ?>
 
 			</li>
-
 		
-	  <li>
-	  <?php if(!empty($this->Session->read('Auth.User.username'))){
-		  echo "<div class='btn-group'>
-		  <button type='button' class='btn btn-secondary dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>"."您好".$this->Session->read('Auth.User.username').
-			"</button>
-		  <div class='dropdown-menu'>
-			<a class='dropdown-item' href='#'>"."查看个人信息"."</a>"."<div class='dropdown-divider'></div>";
-			echo $this->Html->link(
-				'退出登录',['controller' => 'Users',
-					'action' =>'logout'] ,
-				array('class' => 'dropdown-item')
-			); }else{}
+		
+		  	<li>
+	  		<?php if(!empty($this->Session->read('Auth.User.username'))){
+		 		 echo "<div class='btn-group'>
+		 			 <button type='button' class='btn btn-secondary dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>"."您好".$this->Session->read('Auth.User.username').
+						"</button>
+						  <div class='dropdown-menu'>
+						<a class='dropdown-item' href='#'>"."查看个人信息"."</a>"."<div class='dropdown-divider'></div>";
+						echo $this->Html->link(
+						'退出登录',['controller' => 'Users',
+							'action' =>'logout'] ,
+						array('class' => 'dropdown-item')
+					); }else{}
 
 
 		// 	<div class='dropdown-divider'></div>
