@@ -3,6 +3,10 @@ App::uses('AppController', 'Controller');
 
 class UsersController extends AppController {
 
+    public $helpers = array('Html', 'Form','Flash');
+    public $components = array('Flash');
+    
+
  
     public function beforeFilter() {
         parent::beforeFilter();
@@ -12,6 +16,8 @@ class UsersController extends AppController {
     public function login() {
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
+                $this->Flash->success('登陆成功');
+                //debug($_SESSION);
               
                 return $this->redirect(array('action' => 'index'));
                 //return $this->redirect($this->Auth->redirectUrl());
@@ -79,10 +85,10 @@ class UsersController extends AppController {
             throw new NotFoundException(__('Invalid user'));
         }
         if ($this->User->delete()) {
-            $this->Flash->success(__('User deleted'));
+            $this->Flash->success(__('粘好删除'));
             return $this->redirect(array('action' => 'index'));
         }
-        $this->Flash->error(__('User was not deleted'));
+        $this->Flash->error(__('账号删除失败'));
         return $this->redirect(array('action' => 'index'));
     }
 

@@ -43,8 +43,8 @@ class AppController extends Controller {
         'Flash',
         'Auth' => array(
             'loginRedirect' => array(
-                'controller' => 'GameInfo',
-                'action' => 'index'
+                'controller' => 'Users',
+                'action' => 'login'
             ),
             'logoutRedirect' => array(
                 'controller' => 'pages',
