@@ -1,5 +1,25 @@
 <!-- File: /app/View/Monsters/index.ctp -->
+<?php 
+echo $this->Paginator->prev(
+    '上一页',
+    null,
+    null,
+    array('class' => 'disabled')
+);
 
+echo "&nbsp";
+
+echo $this->Paginator->numbers(); 
+
+echo "&nbsp";
+  
+  echo $this->Paginator->next(
+    '下一页',
+    null,
+    null,
+    array('class' => 'disabled')
+  );
+ ?>
 <h1>游戏列表</h1>
 
 
@@ -77,3 +97,12 @@
 
     
 </table>
+<?php
+
+
+// echo "<pre>";
+// print_r($_SESSION)  ;
+// //$_SESSION['Auth']['User']['username']
+// echo "</pre>";
+//echo "我是用户".$uname = $this->Session->read('Auth.User.username')." id是".$uid = $this->Session->read('Auth.User.id')
+?>
