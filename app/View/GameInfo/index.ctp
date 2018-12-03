@@ -27,60 +27,40 @@ echo "&nbsp";
 
 
 <table> 
-    <tr>
-        <th>编号</th>
-        <th>游戏名字</th>
-        <th>游戏类型</th>
-        <th>发行时间</th>
-        <th>发行商</th>
-        <th>评分</th>
-        <th>游戏介绍</th>
-        <th>游戏平台</th>
-        <th>游戏价格</th>
-    </tr>
-    <?php echo $this->Html->link(
-    'Add Post',
-    array('controller' => 'GameInfo', 'action' => 'add')
-); ?>
+<div class="container">
 
 
 
 
-
-
-
-    <!-- Here is where we loop through our $Monsters array, printing out Monster info -->
-<?php
-?>
     <?php foreach ($gameinfo as $GameInfo): ?>
-    <tr>
-<td><?php echo $GameInfo['GameInfo']['id']; ?></td>
-<td><?php echo $GameInfo['GameInfo']['game_name']; ?></td>
-<td><?php echo $GameInfo['GameInfo']['type']; ?></td>
-<td><?php echo $GameInfo['GameInfo']['release_date']; ?></td>
-<td><?php echo $GameInfo['GameInfo']['publisher']; ?></td>
-<td><?php echo $GameInfo['GameInfo']['score']; ?></td>
-<td><?php echo $GameInfo['GameInfo']['introduction']; ?></td>
-<td><?php echo $GameInfo['GameInfo']['platform']; ?></td>
-<td><?php echo $GameInfo['GameInfo']['price']; ?></td>
+  
 
-	<td>
-            <?php
+
+
+
+<div class="row">
+    <div class="col-3">
+    宣传图片<img src="">
+
+ 
+    <br>
+
+     <?php
                 echo $this->Html->link(
                     '查看',
                     array('action' => 'view', $GameInfo['GameInfo']['id'])
                 );
             ?>
-        </td>
-        <td>
+        
+        
             <?php
                 echo $this->Html->link(
                     '编辑',
                     array('action' => 'edit', $GameInfo['GameInfo']['id'])
                 );
             ?>
-        </td>
-        <td>
+      
+      
             <?php
                 echo $this->Form->postLink(
                     'Delete',
@@ -89,20 +69,57 @@ echo "&nbsp";
                 );
             ?>
          
-        </td>
-       
-    </tr>
+         <br>
+
+    </div>
+    <div class="col-5">
+    游戏名字:<?php echo $GameInfo['GameInfo']['game_name']; ?><br>
+    <br>
+    游戏类型:<?php echo $GameInfo['GameInfo']['type']; ?><br>
+    <br>
+    发行时间:<?php echo $GameInfo['GameInfo']['release_date']; ?><br>
+    <br>
+    发行商:<?php echo $GameInfo['GameInfo']['publisher']; ?><br>
+    <br>
+    游戏平台:<?php echo $GameInfo['GameInfo']['platform']; ?><br>
+    <br>
+    评分:<?php echo $GameInfo['GameInfo']['score']; ?><br>
+   
+    </div>
+  
+ 
+    <div class="col-3">
+    游戏价格: <?php echo $GameInfo['GameInfo']['price']; ?><br>
+
+    <br>
+    游戏介绍:<?php echo $GameInfo['GameInfo']['introduction']; ?><br>
+    </div>
+
+  	
+
+
+
+
+<div class="col-1">
+  ▲顶 <?php echo $this->Html->image('iine.png',array('width'=>'40','height'=>'40'));?> <br>
+  
+    <br>
+  ▼踩<?php echo $this->Html->image('dae.jpg',array('width'=>'50','height'=>'50'));?><br>
+  </div>
+
+
+
+
+
+
+
+</div>
+
+
+  
     <?php endforeach; ?>
-    
+              
 
     
 </table>
-<?php
 
-
-// echo "<pre>";
-// print_r($_SESSION)  ;
-// //$_SESSION['Auth']['User']['username']
-// echo "</pre>";
-//echo "我是用户".$uname = $this->Session->read('Auth.User.username')." id是".$uid = $this->Session->read('Auth.User.id')
-?>
