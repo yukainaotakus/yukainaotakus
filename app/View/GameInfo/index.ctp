@@ -1,5 +1,25 @@
 <!-- File: /app/View/Monsters/index.ctp -->
+<?php 
+echo $this->Paginator->prev(
+    '上一页',
+    null,
+    null,
+    array('class' => 'disabled')
+);
 
+echo "&nbsp";
+
+echo $this->Paginator->numbers(); 
+
+echo "&nbsp";
+  
+  echo $this->Paginator->next(
+    '下一页',
+    null,
+    null,
+    array('class' => 'disabled')
+  );
+ ?>
 <h1>游戏列表</h1>
 
 
@@ -102,3 +122,4 @@
 
     
 </table>
+
