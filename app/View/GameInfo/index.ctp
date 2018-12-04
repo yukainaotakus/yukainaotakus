@@ -1,25 +1,5 @@
 <!-- File: /app/View/Monsters/index.ctp -->
-<?php 
-echo $this->Paginator->prev(
-    '上一页',
-    null,
-    null,
-    array('class' => 'disabled')
-);
 
-echo "&nbsp";
-
-echo $this->Paginator->numbers(); 
-
-echo "&nbsp";
-  
-  echo $this->Paginator->next(
-    '下一页',
-    null,
-    null,
-    array('class' => 'disabled')
-  );
- ?>
 <h1>游戏列表</h1>
 
 
@@ -27,40 +7,60 @@ echo "&nbsp";
 
 
 <table> 
-<div class="container">
+    <tr>
+        <th>编号</th>
+        <th>游戏名字</th>
+        <th>游戏类型</th>
+        <th>发行时间</th>
+        <th>发行商</th>
+        <th>评分</th>
+        <th>游戏介绍</th>
+        <th>游戏平台</th>
+        <th>游戏价格</th>
+    </tr>
+    <?php echo $this->Html->link(
+    'Add Post',
+    array('controller' => 'GameInfo', 'action' => 'add')
+); ?>
 
 
 
 
+
+
+
+    <!-- Here is where we loop through our $Monsters array, printing out Monster info -->
+<?php
+?>
     <?php foreach ($gameinfo as $GameInfo): ?>
-  
+    <tr>
+<td><?php echo $GameInfo['GameInfo']['id']; ?></td>
+<td><?php echo $GameInfo['GameInfo']['game_name']; ?></td>
+<td><?php echo $GameInfo['GameInfo']['type']; ?></td>
+<td><?php echo $GameInfo['GameInfo']['release_date']; ?></td>
+<td><?php echo $GameInfo['GameInfo']['publisher']; ?></td>
+<td><?php echo $GameInfo['GameInfo']['score']; ?></td>
+<td><?php echo $GameInfo['GameInfo']['introduction']; ?></td>
+<td><?php echo $GameInfo['GameInfo']['platform']; ?></td>
+<td><?php echo $GameInfo['GameInfo']['price']; ?></td>
 
-
-
-
-<div class="row">
-    <div class="col-3">
-    宣传图片<img src="">
-
- 
-    <br>
-
-     <?php
+	<td>
+            <?php
                 echo $this->Html->link(
                     '查看',
                     array('action' => 'view', $GameInfo['GameInfo']['id'])
                 );
             ?>
-        
-        
+        </td>
+        <td>
             <?php
                 echo $this->Html->link(
                     '编辑',
                     array('action' => 'edit', $GameInfo['GameInfo']['id'])
                 );
             ?>
-      
-      
+        </td>
+        <td>
             <?php
                 echo $this->Form->postLink(
                     'Delete',
@@ -69,57 +69,114 @@ echo "&nbsp";
                 );
             ?>
          
-         <br>
-
-    </div>
-    <div class="col-5">
-    游戏名字:<?php echo $GameInfo['GameInfo']['game_name']; ?><br>
-    <br>
-    游戏类型:<?php echo $GameInfo['GameInfo']['type']; ?><br>
-    <br>
-    发行时间:<?php echo $GameInfo['GameInfo']['release_date']; ?><br>
-    <br>
-    发行商:<?php echo $GameInfo['GameInfo']['publisher']; ?><br>
-    <br>
-    游戏平台:<?php echo $GameInfo['GameInfo']['platform']; ?><br>
-    <br>
-    评分:<?php echo $GameInfo['GameInfo']['score']; ?><br>
-   
-    </div>
-  
- 
-    <div class="col-3">
-    游戏价格: <?php echo $GameInfo['GameInfo']['price']; ?><br>
-
-    <br>
-    游戏介绍:<?php echo $GameInfo['GameInfo']['introduction']; ?><br>
-    </div>
-
-  	
-
-
-
-
-<div class="col-1">
-  ▲顶 <?php echo $this->Html->image('iine.png',array('width'=>'40','height'=>'40'));?> <br>
-  
-    <br>
-  ▼踩<?php echo $this->Html->image('dae.jpg',array('width'=>'50','height'=>'50'));?><br>
-  </div>
-
-
-
-
-
-
-
-</div>
-
-
-  
+        </td>
+       
+    </tr>
     <?php endforeach; ?>
-              
+    
 
     
 </table>
+<?php
 
+
+// echo "<pre>";
+// print_r($_SESSION)  ;
+// $_SESSION['Auth']['User']['username']
+// echo "</pre>";
+//echo "我是用户".$uname = $this->Session->read('Auth.User.username')." id是".$uid = $this->Session->read('Auth.User.id')
+?>
+<?php 
+//pagenation 数字
+// function testsatoshi($page=1){
+//     echo "这里是test";  
+//}         
+//     testsatoshi();
+
+
+print_r($pagenation);
+$pageBegin=$pagenation['pageBegin'];
+$pageEnd=$pagenation['pageEnd'];
+$page=isset($_GET['page'])?$_GET['page']:1;
+
+
+
+// echo $this->Html->script('jquery-3.3.1.js');
+// echo $this->Html->script('bootstrap.js');
+// echo $this->Html->css('bootstrap');
+echo '<nav aria-label="...">';
+echo '<ul class="pagination pagination-lg">';
+echo '<li class="page-item disabled">';
+echo '<a class="page-link" href="" tabindex="-1"></a >';
+echo '</li>';
+echo '<li class="page-item"><a class="page-link" href="?page='.($page-1).'">上一页</a ></li>';
+
+
+for($a=$pageBegin;$a<=$pageEnd;$a++){
+    
+echo '<li class="page-item"><a class="page-link" href="?page='.$a.'">'.$a.'</a ></li>';
+}
+
+
+
+echo '<li class="page-item"><a class="page-link" href="?page='.($page+1).'">下一页</a ></li>';
+echo '</ul>';
+echo '</nav>';
+
+
+
+
+// $page="";
+// $a="";
+// $startPage=$page;
+
+// echo '<nav aria-label="...">';
+// echo  '<ul class="pagination pagination-lg">';
+// echo     '<li class="page-item disabled">';
+
+// echo     '</li>';
+// echo     '<li class="page-item"><a class="page-link" href="?p='.($page-1).'">上一页</a></li>';
+// for($a=$startPage;$a<=$endPage;$a++){
+    
+//     echo '<li class="page-item"><a class="page-link" href="?p='.$a.'">'.$a.'</a></li>';
+// }
+// echo    '<li class="page-item"><a class="page-link" href="?p='.($page+1).'">下一页</a></li>';
+// echo   '</ul>';
+// echo '</nav>';
+
+
+
+// function getpage($page=1){
+//     echo 1111;
+//     return ;
+// }
+
+
+// //用框架方式的写法备份
+// echo $this->Paginator->prev(
+//     '上一页',
+//     null,
+//     null,
+//     array('class' => 'disabled')
+// );
+// echo "&nbsp";
+// echo $this->Paginator->numbers(
+// ); 
+// echo "&nbsp"; 
+// echo $this->Paginator->next(
+//     '下一页',
+//     null,
+//     null,
+//     array('class' => 'disabled')
+//   );
+
+// 写法备份
+//   echo $this->Paginator->counter(
+//    // '{:page}'. //当前页
+//    // '{:pages}'. //总页数
+//   //  '{:count}' //总共多少条数据
+   
+// );
+
+
+ ?>
