@@ -1,6 +1,7 @@
 <!-- File: /app/View/Monsters/add.ctp -->
 
 <h1>增加数据yutaku</h1>
+<!--垃圾袋吗3-->
 <?php
 echo $this->Form->create('GameInfo');
 
