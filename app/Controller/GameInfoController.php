@@ -1,11 +1,16 @@
 <?php
 class GameInfoController extends AppController {
     public $helpers = array('Html', 'Form','Flash');
-    public $components = array('Auth','Session','Paginator' => array(
-        'limit' => 1,
-        'maxLimit' => 1,
-        'order' => array('id' => 'asc')
-      ));
+    public $components = array('Auth','Session','Paginator');
+      
+      
+        //用框架方式的写法备份 
+        // public $components = array('Auth','Session','Paginator' => array(
+        //'limit' => 5,
+        //'maxLimit' => 10,
+        //'order' => array('id' => 'asc')
+        //  ));
+    
     
     
     
@@ -35,21 +40,79 @@ class GameInfoController extends AppController {
 
 
    
-   
 
    
-    public function index() {
+    public function index(){
+        if ($this->request->is('GET')){
+        $page=isset($_GET['page'])?$_GET['page']:1;
+        $this->loadModel("GameInfo");
+        $itemCount=$this->GameInfo->find('count'); //数据总数
+        // function getPage($page=1){
+        // echo "这里是getpage函数,我要在这里返回显示的最大页数";
+
+        
+        //     }
+        function getPage($page,$itemCount){
+                //if判断如果当前是首页了的话 
+                
+                $num=1; 
+                // if($page<1){
+              
+                // //return $this->redirect(array('action' => 'index'));
+                // }
+                //计算总页数=总数/每页显示数
+                //需要一个数据库长度的count
+                $total= ceil($itemCount/$num); // ceil() 函数向上舍入为最接近的整数。
+                if($page>$total){ 
+                $page=$total-1;
+                }
+
+                $maxPageCount=10; //开始一共有10行
+                $buffCount=5; //能看到5行
+                $pageBegin=1; //开始页面1行
+                $pageEnd="";
+                if ($page< $buffCount){ //如果页数要比页小
+                $pageBegin=1; 
+                }else if($page>=$buffCount and $page<=$total ){ //当页数大于5页 而且 页数小于等于 总页数-10
+                $pageBegin=$page-$buffCount+1; //就让开始页面=第几页-5+1
+                }else{
+                $pageBegin=$total-$maxPageCount+1; //否则开始页面就等于=总页面-10+1
+                }
+                $pageEnd=$pageBegin+$maxPageCount-1;
+                $pageEnd=$pageEnd>$total?$total:$pageEnd;
+                
+                $Pagenation=[
+                'page'=>$page,
+                'pageBegin'=>$pageBegin,
+                'pageEnd'=>$pageEnd,
+                'itemCount'=>$itemCount,
+                ];
+                
+                // return $this->set('pageBegin',$pageBegin);
+                // return $this->set('hello', $pageEnd);
+                return $Pagenation;
+                }
+       
+        }
+        
+        //$this->set('gameinfo',$this->Paginator->paginate('GameInfo'));
+       
+      
+        $this->set('gameinfo', $this->GameInfo->find('all', array('limit' => 1,  'page' =>$page))); 
+        $this->set('pagenation', getPage($page,$itemCount)); 
+        
+echo "<pre>";
+print_r(getPage($page,$itemCount));
+//print_r($GLOBALS);
+//print_r($_SESSION)  ;
+//$_SESSION['Auth']['User']['username']
+echo "</pre>";
+    
+   
+        
         
 
-     
-        $this->loadModel("GameInfo");
-        $this->set('gameinfo',$this->Paginator->paginate('GameInfo'));
-        //$this->set('gameinfo', $this->GameInfo->find('all'));
- 
-
-
     }
-
 
    public function view($id = null) {
         if (!$id) {
