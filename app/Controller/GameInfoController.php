@@ -2,31 +2,31 @@
 class GameInfoController extends AppController {
     public $helpers = array('Html', 'Form','Flash');
     public $components = array('Auth','Session','Paginator');
-      
-      
-        //用框架方式的写法备份 
+
+
+        //用框架方式的写法备份
         // public $components = array('Auth','Session','Paginator' => array(
         //'limit' => 5,
         //'maxLimit' => 10,
         //'order' => array('id' => 'asc')
         //  ));
-    
-    
-    
-    
-    
+
+
+
+
+
     public function beforeFilter() {
         parent::beforeFilter();
         //$this->Auth->allow();
-    
- 
+
+
     }
     public function isAuthorized($user) {
         // 所有注册的用户都能够添加文章
         if ($this->action === 'add') {
             return true;
         }
-    
+
         // 文章的所有者能够编辑和删除它
         if (in_array($this->action, array('edit', 'delete'))) {
             $id = (int) $this->request->params['pass'][0];
@@ -34,15 +34,35 @@ class GameInfoController extends AppController {
             //     return true;
             // }
         }
-    
+
         return parent::isAuthorized($user);
     }
 
 
-   
+	/**
+	 * 执行 点赞
+	 */
+    public function doLike(){
 
-   
+    	$this->autoRender = false;
+
+    	// 接收参数 game id
+		$gameId = $this->request->query("gameInfo");
+
+		// 从session中获取用户的信息
+		$userInfo = $this->Auth->user();
+		$userId = $userInfo['id'];
+
+//		debug($gameId);
+//		debug($userId);
+
+		echo true;
+
+		// 执行数据操作
+	}
+
     public function index(){
+
         if ($this->request->is('GET')){
         $page=isset($_GET['page'])?$_GET['page']:1;
         $this->loadModel("GameInfo");
@@ -50,21 +70,16 @@ class GameInfoController extends AppController {
         // function getPage($page=1){
         // echo "这里是getpage函数,我要在这里返回显示的最大页数";
 
-        
+
         //     }
         function getPage($page,$itemCount){
-                //if判断如果当前是首页了的话 
-                
-                $num=1; 
-                // if($page<1){
-              
-                // //return $this->redirect(array('action' => 'index'));
-                // }
+                //if判断如果当前是首页了的话
+                $itemPerPage=8;
                 //计算总页数=总数/每页显示数
                 //需要一个数据库长度的count
-                $total= ceil($itemCount/$num); // ceil() 函数向上舍入为最接近的整数。
-                if($page>$total){ 
-                $page=$total-1;
+                $total= ceil($itemCount/$itemPerPage); // ceil() 函数向上舍入为最接近的整数。
+                if($page>$total){
+                	$page=$total-1;
                 }
 
                 $maxPageCount=10; //开始一共有10行
@@ -72,7 +87,7 @@ class GameInfoController extends AppController {
                 $pageBegin=1; //开始页面1行
                 $pageEnd="";
                 if ($page< $buffCount){ //如果页数要比页小
-                $pageBegin=1; 
+                $pageBegin=1;
                 }else if($page>=$buffCount and $page<=$total ){ //当页数大于5页 而且 页数小于等于 总页数-10
                 $pageBegin=$page-$buffCount+1; //就让开始页面=第几页-5+1
                 }else{
@@ -80,39 +95,24 @@ class GameInfoController extends AppController {
                 }
                 $pageEnd=$pageBegin+$maxPageCount-1;
                 $pageEnd=$pageEnd>$total?$total:$pageEnd;
-                
+
                 $Pagenation=[
-                'page'=>$page,
-                'pageBegin'=>$pageBegin,
-                'pageEnd'=>$pageEnd,
-                'itemCount'=>$itemCount,
+					'page'=>$page,
+					'pageBegin'=>$pageBegin,
+					'pageEnd'=>$pageEnd,
+					'itemCount'=>$itemCount,
+					'itemPerPage'=>$itemPerPage //每页数据的个数
                 ];
-                
-                // return $this->set('pageBegin',$pageBegin);
-                // return $this->set('hello', $pageEnd);
+
                 return $Pagenation;
                 }
-       
-        }
-        
-        //$this->set('gameinfo',$this->Paginator->paginate('GameInfo'));
-       
-      
-        $this->set('gameinfo', $this->GameInfo->find('all', array('limit' => 1,  'page' =>$page))); 
-        $this->set('pagenation', getPage($page,$itemCount)); 
-        
-echo "<pre>";
-print_r(getPage($page,$itemCount));
-//print_r($GLOBALS);
-//print_r($_SESSION)  ;
-//$_SESSION['Auth']['User']['username']
-echo "</pre>";
-    
-   
-        
-        
 
-    }
+        }
+
+		$this->set('pagenation', $pagenation = getPage($page,$itemCount));
+		$this->set('gameinfo', $this->GameInfo->find('all', array('limit' => $pagenation['itemPerPage'],  'page' =>$page)));
+
+	}
 
    public function view($id = null) {
         if (!$id) {
@@ -130,7 +130,7 @@ echo "</pre>";
         if ($this->request->is('POST')) {
             $this->GameInfo->create();
           //debug($this->request->data);
-          
+
             if ($this->GameInfo->save($this->request->data)) {
                 $this->Flash->success(__('成功.'));
                 return $this->redirect(array('action' => 'index'));
@@ -144,12 +144,12 @@ echo "</pre>";
         if (!$id) {
             throw new NotFoundException(__('I木有ID可不行哟'));
         }
-    
+
         $GameInfo = $this->GameInfo->findById($id);
         if (!$GameInfo) {
             throw new NotFoundException(__('并不致命的错误'));
         }
-    
+
         if ($this->request->is(array('Post', 'put'))) {
             $this->GameInfo->id = $id;
             if ($this->GameInfo->save($this->request->data)) {
@@ -158,7 +158,7 @@ echo "</pre>";
             }
             $this->Flash->error(__('失败了'));
         }
-    
+
         if (!$this->request->data) {
             $this->request->data = $GameInfo;
         }
@@ -170,7 +170,7 @@ echo "</pre>";
         if ($this->request->is('get')) {
             throw new MethodNotAllowedException();
         }
-    
+
         if ($this->GameInfo->delete($id)) {
             $this->Flash->success(
                 __('你删除了一个编号为: %s 号的数据', h($id))
@@ -180,10 +180,10 @@ echo "</pre>";
                 __('你想删除编号为: %s 号的数据却失败了.', h($id))
             );
         }
-    
+
         return $this->redirect(array('action' => 'index'));
     }
 }
-   
+
 
 ?>
