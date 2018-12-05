@@ -6,7 +6,7 @@
 
 
 
-<table> 
+<table>
     <tr>
         <th>编号</th>
         <th>游戏名字</th>
@@ -68,14 +68,14 @@
                     array('confirm' => 'Are you sure?')
                 );
             ?>
-         
+
         </td>
-       
+
     </tr>
     <?php endforeach; ?>
-    
 
-    
+
+
 </table>
 <?php
 
@@ -86,11 +86,11 @@
 // echo "</pre>";
 //echo "我是用户".$uname = $this->Session->read('Auth.User.username')." id是".$uid = $this->Session->read('Auth.User.id')
 ?>
-<?php 
+<?php
 //pagenation 数字
 // function testsatoshi($page=1){
-//     echo "这里是test";  
-//}         
+//     echo "这里是test";
+//}
 //     testsatoshi();
 
 
@@ -113,7 +113,7 @@ echo '<li class="page-item"><a class="page-link" href="?page='.($page-1).'">上�
 
 
 for($a=$pageBegin;$a<=$pageEnd;$a++){
-    
+
 echo '<li class="page-item"><a class="page-link" href="?page='.$a.'">'.$a.'</a ></li>';
 }
 
@@ -137,7 +137,7 @@ echo '</nav>';
 // echo     '</li>';
 // echo     '<li class="page-item"><a class="page-link" href="?p='.($page-1).'">上一页</a></li>';
 // for($a=$startPage;$a<=$endPage;$a++){
-    
+
 //     echo '<li class="page-item"><a class="page-link" href="?p='.$a.'">'.$a.'</a></li>';
 // }
 // echo    '<li class="page-item"><a class="page-link" href="?p='.($page+1).'">下一页</a></li>';
@@ -161,8 +161,8 @@ echo '</nav>';
 // );
 // echo "&nbsp";
 // echo $this->Paginator->numbers(
-// ); 
-// echo "&nbsp"; 
+// );
+// echo "&nbsp";
 // echo $this->Paginator->next(
 //     '下一页',
 //     null,
@@ -175,7 +175,7 @@ echo '</nav>';
 //    // '{:page}'. //当前页
 //    // '{:pages}'. //总页数
 //   //  '{:count}' //总共多少条数据
-   
+
 // );
 
 
