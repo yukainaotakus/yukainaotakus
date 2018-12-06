@@ -1,19 +1,10 @@
 <?php
+
+
 class GameInfoController extends AppController {
+
     public $helpers = array('Html', 'Form','Flash');
     public $components = array('Auth','Session','Paginator');
-
-
-        //用框架方式的写法备份
-        // public $components = array('Auth','Session','Paginator' => array(
-        //'limit' => 5,
-        //'maxLimit' => 10,
-        //'order' => array('id' => 'asc')
-        //  ));
-
-
-
-
 
     public function beforeFilter() {
         parent::beforeFilter();
@@ -126,33 +117,77 @@ class GameInfoController extends AppController {
         $this->set('gameinfo', $gameinfo);
     }
 
-    public function add() {
-        if ($this->request->is('POST')) {
+    public function add() {    
+        if ($this->request->is('post')) { 
+            //create模型
             $this->GameInfo->create();
-          //debug($this->request->data);
+            //遍历平台的数组
+            foreach($_POST['data']['GameInfo']['platform'] as $i){
+            $platDecArray[]= $i;
+            }
+            //得到十进制的数字
+            $decNum=array_sum($platDecArray);
+            
+            //debug($this->request->data);
+            //$result = $this->request->data;
+            //把post的数据set给模型 平台的数值用刚才求出来的数
+            $result=$this->GameInfo->set(array(
+               'game_name' =>$_POST['data']['GameInfo']['game_name'],
+               'type' => $_POST['data']['GameInfo']['type'],
+               'release_date' => $_POST['data']['GameInfo']['release_date'],
+               'publisher' => $_POST['data']['GameInfo']['publisher'],
+               'score' => $_POST['data']['GameInfo']['score'],
+               'introduction' => $_POST['data']['GameInfo']['introduction'],
+               'platform' => $decNum,
+               'price' => $_POST['data']['GameInfo']['price'],
+                ));
 
-            if ($this->GameInfo->save($this->request->data)) {
+            if ($this->GameInfo->save($result)) { 
                 $this->Flash->success(__('成功.'));
                 return $this->redirect(array('action' => 'index'));
-            }
+              }
             $this->Flash->error(__('错误了.'));
             //debug($this->GameInfo->validationErrors);
         }
     }
 
     public function edit($id = null) {
+       
         if (!$id) {
             throw new NotFoundException(__('I木有ID可不行哟'));
         }
-
+        
         $GameInfo = $this->GameInfo->findById($id);
+        $this->set('a', $GameInfo);
         if (!$GameInfo) {
             throw new NotFoundException(__('并不致命的错误'));
         }
 
         if ($this->request->is(array('Post', 'put'))) {
+            
             $this->GameInfo->id = $id;
-            if ($this->GameInfo->save($this->request->data)) {
+            foreach($_POST['data']['GameInfo']['platform'] as $i){
+                $platDecArray[]= $i;
+                }
+                //得到十进制的数字
+                $decNum=array_sum($platDecArray);
+                
+                //debug($this->request->data);
+                //$result = $this->request->data;
+                //把post的数据set给模型 平台的数值用刚才求出来的数
+                $result=$this->GameInfo->set(array(
+                   'game_name' =>$_POST['data']['GameInfo']['game_name'],
+                   'type' => $_POST['data']['GameInfo']['type'],
+                   'release_date' => $_POST['data']['GameInfo']['release_date'],
+                   'publisher' => $_POST['data']['GameInfo']['publisher'],
+                   'score' => $_POST['data']['GameInfo']['score'],
+                   'introduction' => $_POST['data']['GameInfo']['introduction'],
+                   'platform' => $decNum,
+                   'price' => $_POST['data']['GameInfo']['price'],
+                    ));
+           //$this->request->data
+            //$this->GameInfo->platform
+            if ($this->GameInfo->save($result)) {
                 $this->Flash->success(__('ok改好了'));
                 return $this->redirect(array('action' => 'index'));
             }
