@@ -36,7 +36,11 @@
     <div class="container">
 
 
-		<?php foreach ($gameinfo as $GameInfo): ?>
+		<?php 
+		App::import('Vendor','util');
+		App::import('Vendor','platform');
+
+		 foreach ($gameinfo as $GameInfo): ?>
 
 
             <div class="row">
@@ -80,8 +84,15 @@
                     发行时间:<?php echo $GameInfo['GameInfo']['release_date']; ?><br>
                     <br>
                     发行商:<?php echo $GameInfo['GameInfo']['publisher']; ?><br>
-                    <br>
-                    游戏平台:<?php echo $GameInfo['GameInfo']['platform']; ?><br>
+                   
+					游戏平台:<?php 
+					$decNum = $GameInfo['GameInfo']['platform']; 
+					$platArray=(bin2dec($decNum)) ;
+					$myPlatform=showPlatform($platArray);
+					foreach ($myPlatform as $key => $value) {
+  					  		echo $key." ";
+								}  
+							 ?><br> 
                     <br>
                     评分:<?php echo $GameInfo['GameInfo']['score']; ?><br>
 
@@ -141,62 +152,9 @@ for ($a = $pageBegin; $a <= $pageEnd; $a++) {
 	echo '<li class="page-item"><a class="page-link" href="?page=' . $a . '">' . $a . '</a ></li>';
 }
 
-
 echo '<li class="page-item"><a class="page-link" href="?page=' . ($page + 1) . '">下一页</a ></li>';
 echo '</ul>';
 echo '</nav>';
-
-
-// $page="";
-// $a="";
-// $startPage=$page;
-
-// echo '<nav aria-label="...">';
-// echo  '<ul class="pagination pagination-lg">';
-// echo     '<li class="page-item disabled">';
-
-// echo     '</li>';
-// echo     '<li class="page-item"><a class="page-link" href="?p='.($page-1).'">上一页</a></li>';
-// for($a=$startPage;$a<=$endPage;$a++){
-
-//     echo '<li class="page-item"><a class="page-link" href="?p='.$a.'">'.$a.'</a></li>';
-// }
-// echo    '<li class="page-item"><a class="page-link" href="?p='.($page+1).'">下一页</a></li>';
-// echo   '</ul>';
-// echo '</nav>';
-
-
-// function getpage($page=1){
-//     echo 1111;
-//     return ;
-// }
-
-
-// //用框架方式的写法备份
-// echo $this->Paginator->prev(
-//     '上一页',
-//     null,
-//     null,
-//     array('class' => 'disabled')
-// );
-// echo "&nbsp";
-// echo $this->Paginator->numbers(
-// ); 
-// echo "&nbsp"; 
-// echo $this->Paginator->next(
-//     '下一页',
-//     null,
-//     null,
-//     array('class' => 'disabled')
-//   );
-
-// 写法备份
-//   echo $this->Paginator->counter(
-//    // '{:page}'. //当前页
-//    // '{:pages}'. //总页数
-//   //  '{:count}' //总共多少条数据
-
-// );
 
 
 ?>
