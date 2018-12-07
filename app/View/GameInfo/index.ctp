@@ -1,5 +1,8 @@
 <!-- File: /app/View/Monsters/index.ctp -->
-
+   <?php
+ 
+	
+	?>
 <script>
 	// 当点击带有“data-ajax=link”的标签时，触发ajax事件
 	$(function () {
@@ -26,15 +29,65 @@
 		});
 	})
 
+	$(function(){
+		$("[data-ajaxLike=link]").click(function(){
+			var url = $(this).attr("href");
+		$.ajax({
+			"url":url,
+			"dataType":"json",
+			"type":"get",
+			"success":function(response){
+				if(response.result===true){
+					alert("点赞成功");
 
+				}else{
+					alert(response.msg)
+				}
+			},
+			"error": function(){
+					alert("通信失败");
+                }
+
+		});
+		return false;
+	});
+	})
+	
+	
+
+		$(function(){
+		$("[data-ajaxdontlike=link]").click(function(){
+			var url = $(this).attr("href");
+		$.ajax({
+			"url":url,
+			"dataType":"json",
+			"type":"get",
+			"success":function(response){
+				if(response.result===true){
+					alert("点踩成功");
+
+				}else{
+					alert(response.msg)
+				}
+			},
+			"error": function(){
+					alert("通信失败");
+                }
+
+		});
+		return false;
+	});
+	})
 </script>
 
-<h1>游戏列表</h1>
+
+
+
 
 
 <table>
     <div class="container">
-
+	<h1>游戏列表</h1>
 
 		<?php foreach ($gameinfo as $GameInfo): ?>
 
@@ -103,21 +156,63 @@
 						]
 
 					);
+
+
 					?>
                 </div>
 
 
                 <div class="col-1">
-                    ▲顶 <?php echo $this->Html->image('iine.png', array(
-						'width' => '40',
-						'height' => '40'
-					)); ?> <br>
+				<?php
+						// echo $this->Html->link('赞', array(
+						// 	'controller' => 'Likes',
+						// 	'action' => 'ajaxLike',
+						// 	'?' => ['game_info_id' => $GameInfo['GameInfo']['id']],
+						// ), [
+						// 	'data-ajaxLike' => 'link'
+						// ]
 
-                    <br>
-                    ▼踩<?php echo $this->Html->image('dae.jpg', array(
-						'width' => '50',
-						'height' => '50'
-					)); ?><br>
+					//);
+					echo $this->Html->link(
+						$this->Html->image("good.png",['width' => '60',
+							'height' => '60']),
+							// "<img src='/img/iine.png' >",
+						array(		
+						'controller'=>'Likes',
+						'action'=>'ajaxLike',
+						'?' => ['game_info_id' => $GameInfo['GameInfo']['id']],
+					), [
+						'data-ajaxLike' => 'link',
+						'escape' => false
+					]
+					);
+					
+				
+			
+					?>
+				
+				
+               
+<br>
+<br>
+<?php
+					
+					echo $this->Html->link(
+						$this->Html->image("bad.png",['width' => '60',
+							'height' => '60']),
+							// "<img src='/img/iine.png' >",
+						array(		
+						'controller'=>'Likes',
+						'action'=>'ajaxdontlike',
+						'?' => ['game_info_id' => $GameInfo['GameInfo']['id']],
+					), [
+						'data-ajaxLike' => 'link',
+						'escape' => false
+					]
+					);
+				
+				?>
+                
                 </div>
 
 
