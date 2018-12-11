@@ -22,4 +22,5 @@ echo $this->Form->input('platform', array('multiple' => 'checkbox', 'options' =>
 echo $this->Form->input('price');
 
 echo $this->Form->end('保存数据');
+
 ?>
