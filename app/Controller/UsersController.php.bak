@@ -92,16 +92,6 @@ class UsersController extends AppController {
         return $this->redirect(array('action' => 'index'));
     }
 
-
-    function upload()
-{
-    if($this->request->data){
-        if($this->User->saveAll($this->request->data)){
-            echo 'ok';
-        }
-    }
-}
-
 }
 
 ?>
