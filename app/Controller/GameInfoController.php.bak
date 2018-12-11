@@ -1,5 +1,8 @@
 <?php
+
+
 class GameInfoController extends AppController {
+
     public $helpers = array('Html', 'Form','Flash');
     public $components = array('Auth','Session','Paginator');
 
@@ -142,13 +145,14 @@ class GameInfoController extends AppController {
             if ($this->GameInfo->save($result)) { 
                 $this->Flash->success(__('成功.'));
                 return $this->redirect(array('action' => 'index'));
-            }
+              }
             $this->Flash->error(__('错误了.'));
             //debug($this->GameInfo->validationErrors);
         }
     }
 
     public function edit($id = null) {
+       
         if (!$id) {
             throw new NotFoundException(__('I木有ID可不行哟'));
         }
@@ -160,6 +164,7 @@ class GameInfoController extends AppController {
         }
 
         if ($this->request->is(array('Post', 'put'))) {
+            
             $this->GameInfo->id = $id;
             foreach($_POST['data']['GameInfo']['platform'] as $i){
                 $platDecArray[]= $i;
@@ -213,163 +218,7 @@ class GameInfoController extends AppController {
 
         return $this->redirect(array('action' => 'index'));
     }
-
-    public function doUploadFile(){
-        //禁止自动跳转
-        $this->autoRender = false;
-        $id = $this->request->data["uploadfile"]["game_info_id"];
-        debug($this->request->data);
-        debug($id);
-       $radio= $this->request->data["uploadfile"]["dijizhang"];
-       //debug($id);
-        //debug($this->request->data);
-        if($radio==null){
-            $this->Flash->error(__('请选择第几张图片'));
-            return $this->redirect(array('action' => 'uploadfile')); 
-        }
-        //设置文件名字为空
-        $filename = '';
-        //path 路径
-        $uploadData = $this->data['uploadfile']['pdf_path'];
-        debug($uploadData);
-        $houzhui="";
-        if($uploadData['type']=='image/jpeg'){
-            $houzhui="jpg";
-        }
-        else if($uploadData['type']=='image/png'){
-            $filePath = $uploadData['tmp_name'];
-            debug($filePath);
-
-            $image = imagecreatefrompng($filePath);
-                    $bg = imagecreatetruecolor(imagesx($image), imagesy($image));
-                    imagefill($bg, 0, 0, imagecolorallocate($bg, 255, 255, 255));
-                    imagealphablending($bg, TRUE);
-                    imagecopy($bg, $image, 0, 0, 0, 0, imagesx($image), imagesy($image));
-                    imagedestroy($image);
-                    $quality = 50; // 0 = worst / smaller file, 100 = better / bigger file 
-                    $filename = 'game_img_'.$id.'_'.$radio.'.jpg';
-                    imagejpeg($bg,WWW_ROOT."img/gameInfo/".$filename, $quality);
-                    debug(WWW_ROOT."/img/gameInfo");
-                    imagedestroy($bg);
-               //$houzhui="jpg";
-            
-        }
-        else if($uploadData['type']=='image/jpg'){
-            $houzhui="jpg";
-        }
-        else{
-            $this->Flash->error(__('请输入正确的图片格式'));
-            return $this->redirect(array('action' => 'uploadfile'));
-        }
-        
-
-        
-
-        
-        
-        //如果他的size是0 而且没有报错信息 返回一个
-        if ($uploadData['size'] == 0 || $uploadData['error'] !== 0) {
-           return false;
-        }               //显示带有文件扩展名的文件名
-        $filename = basename($uploadData['name']);
-        //文件夹名
-        $uploadFolder = WWW_ROOT . 'img/gameInfo';
-        //文件名 时间戳  下划线加原来的名字
-        //  $filename = time() . '_' . $filename;
-          $filename = 'game_img_'.$id.'_'.$radio.'.'.$houzhui;
-         //下载路径   WWW_ROOT -- webrootディレクトリ絶対パス DS -- PHPのDIRECTORY_SEPARATORの短縮系。Windowsの場合は\ (バックスラッシュ)、 Linuxの場合は/ (フォーワードスラッシュ)
-        $uploadPath = $uploadFolder . DS . $filename;
-        // file_exists 检查文件夹是否存在 
-        if (!file_exists($uploadFolder)) {
-            //mkdir() 函数创建目录。
-           mkdir($uploadFolder);
-        }
-        //move_uploaded_file()将上传的文件移动到新位置。 tmp_name 临时文件夹的文件名
-        if (!move_uploaded_file($uploadData['tmp_name'], $uploadPath)) {
-           return false;
-        }
-     
-        $this->set('image', $filename);
-            $this->Flash->success(__('增加了一张新图片'));
-             return $this->redirect(array('action' => 'index'));
-
-            
-        
-        
-     }
-
-     public function uploadfile(){
-         //接受到了ganme_info_id存到了game_id
-        $game_info_id=$this->request->query('game_info_id');
-        //我存到的给了前台画面 试图
-        $this->set('game_info_id',$game_info_id);
-        
-       
-        
-     }
-// //imagecreatefrompng() 返回一图像标识符，代表了从给定的文件名取得的图像。 
-// $image = imagecreatefrompng($filePath);
-// //imagecreatetruecolor — 新建一个真彩色图像 imagesx — 取得图像宽度 imagesy — 取得图像高度
-// $bg = imagecreatetruecolor(imagesx($image), imagesy($image));
-// //imagefill — 区域填充 imagecolorallocate — 为一幅图像分配颜色
-// imagefill($bg, 0, 0, imagecolorallocate($bg, 255, 255, 255));
-// //imagealphablending — 设定图像的混色模式
-// imagealphablending($bg, TRUE);
-// //imagecopy — 拷贝图像的一部分
-// imagecopy($bg, $image, 0, 0, 0, 0, imagesx($image), imagesy($image));
-// //imagedestroy — 销毁一图像
-// imagedestroy($image);
-// $quality = 50; // 0 = worst / smaller file, 100 = better / bigger file 
-// //imagejpeg — 输出图象到浏览器或文件。
-// imagejpeg($bg, $filePath . ".jpg", $quality);
-// //imagedestroy — 销毁一图像
-// imagedestroy($bg);
-
-
-
-// $image=""
-// function createThumbnail($imageDirectory, $imageName, $thumbDirectory, $thumbWidth) {
-//     $explode = explode(".", $imageName);
-//     $filetype = $explode[1];
-
-//     if ($filetype == 'jpg') {
-//         $srcImg = imagecreatefromjpeg("$imageDirectory/$imageName");
-//     } else
-//     if ($filetype == 'jpeg') {
-//         $srcImg = imagecreatefromjpeg("$imageDirectory/$imageName");
-//     } else
-//     if ($filetype == 'png') {
-//         $srcImg = imagecreatefrompng("$imageDirectory/$imageName");
-//     } else
-//     if ($filetype == 'gif') {
-//         $srcImg = imagecreatefromgif("$imageDirectory/$imageName");
-//     }
-
-//     $origWidth = imagesx($srcImg);
-//     $origHeight = imagesy($srcImg);
-
-//     $ratio = $origWidth / $thumbWidth;
-//     $thumbHeight = $origHeight / $ratio;
-
-//     $thumbImg = imagecreatetruecolor($thumbWidth, $thumbHeight);
-//     imagecopyresized($thumbImg, $srcImg, 0, 0, 0, 0, $thumbWidth, $thumbHeight, $origWidth, $origHeight);
-
-//     if ($filetype == 'jpg') {
-//         imagejpeg($thumbImg, "$thumbDirectory/$imageName");
-//     } else
-//     if ($filetype == 'jpeg') {
-//         imagejpeg($thumbImg, "$thumbDirectory/$imageName");
-//     } else
-//     if ($filetype == 'png') {
-//         imagepng($thumbImg, "$thumbDirectory/$imageName");
-//     } else
-//     if ($filetype == 'gif') {
-//         imagegif($thumbImg, "$thumbDirectory/$imageName");
-//     }
 }
-    
-
-
 
 
 ?>
