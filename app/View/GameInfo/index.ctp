@@ -30,10 +30,10 @@
 	})
 
 	$(function(){
-		$(".wu").each(function(i){
-			i=i+1;
-			$(this).attr("src" , "img/gameInfo/game_img_"+i+"_1.jpg");		
-	 	});
+		// $(".wu").each(function(i){
+		// 	i=i+1;
+		// 	$(this).attr("src" , "img/gameInfo/game_img_"+i+"_1.jpg");
+	 	// });
 
 		$("[data-ajaxLike=link]").click(function(){
 			var url = $(this).attr("href");
@@ -90,9 +90,8 @@
 
 
 
-<table>
     <div class="container">
-	<h1>游戏列表</h1>
+	<h1>2019游戏最佳排行 <span style="color:red;"> *HOT</span></h1>
 
 		<?php 
 		App::import('Vendor','util');
@@ -103,16 +102,21 @@
 
             <div class="row">
                 <div class="col-3">
-                    宣传图片<img src="" height='40px' width='40px' class="wu">
-					<?php 
+
+
+					<?php
+                    echo $this->Html->image("gameInfo/game_img_{$GameInfo['GameInfo']['id']}_1.jpg",[
+                            'style'=>'max-height:240px;max-width:240px;'
+                    ]);
+
 					echo $this->Html->link('上传图片', array(
 							'controller' => 'GameInfo',
 							'action' => 'uploadfile',
 							'?' => ['game_info_id' => $GameInfo['GameInfo']['id']]
 
 						));
-						
-					?>	
+
+					?>
 
 
                     <br>
@@ -216,8 +220,7 @@
 			
 					?>
 				
-				
-               
+
 <br>
 <br>
 <?php
@@ -242,9 +245,8 @@
 
 
             </div>
-
+<hr>
 		<?php endforeach; ?>
-</table>
 <?php
 
 $pageBegin = $pagenation['pageBegin'];
