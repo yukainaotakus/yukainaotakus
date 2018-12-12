@@ -1,8 +1,8 @@
 <!-- File: /app/View/Monsters/index.ctp -->
-
-
-
-
+   <?php
+ 
+	
+	?>
 <script>
 	// 当点击带有“data-ajax=link”的标签时，触发ajax事件
 	$(function () {
@@ -30,11 +30,6 @@
 	})
 
 	$(function(){
-		$(".wu").each(function(i){
-			i=i+1;
-			$(this).attr("src" , "img/gameInfo/game_img_"+i+"_1.jpg");		
-	 	});
-
 		$("[data-ajaxLike=link]").click(function(){
 			var url = $(this).attr("href");
 		$.ajax({
@@ -103,16 +98,7 @@
 
             <div class="row">
                 <div class="col-3">
-                    宣传图片<img src="" height='40px' width='40px' class="wu">
-					<?php 
-					echo $this->Html->link('上传图片', array(
-							'controller' => 'GameInfo',
-							'action' => 'uploadfile',
-							'?' => ['game_info_id' => $GameInfo['GameInfo']['id']]
-
-						));
-						
-					?>	
+                    宣传图片<img src="">
 
 
                     <br>
