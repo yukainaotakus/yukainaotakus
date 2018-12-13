@@ -49,7 +49,23 @@ class GameInfoController extends AppController {
 		// 执行数据操作
 	}
 
+	public function tenki() {
+        $add = $_GET['add'];
+
+        $data = [
+            'add'=>$add,
+            'tenki'=>'晴转多云'
+        ];
+        echo json_encode($data);
+
+
+        sleep(2);
+
+    }
+
     public function index(){
+
+//        debug($this->request->clientIp());
 
         if ($this->request->is('GET')){
         $page=isset($_GET['page'])?$_GET['page']:1;

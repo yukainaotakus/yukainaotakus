@@ -2,13 +2,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<?php echo $this->Html->charset(); 
+	<?php echo $this->Html->charset();
 	?>
 	<title>monster |-|
 		
 		<?php echo $this->fetch('title'); ?>
 	</title>
-	<?php 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127217278-1"></script>
+    <script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-127217278-1');
+    </script>
+
+    <?php
 
 		
 		echo $this->Html->meta('icon');
