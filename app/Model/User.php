@@ -14,15 +14,19 @@ class User extends AppModel {
 
     public $validate = array(
         'username' => array(
-            'required' => array(
-                'rule' => array('notBlank'),
-                'message' => 'A username is required'
+            array(
+                'rule' => 'notBlank',
+                'message' => '必须填写用户名'
+            ),
+            array(
+                'rule' => 'isUnique',
+                'message' => '此用户名已被注册'
             )
         ),
         'password' => array(
             'required' => array(
                 'rule' => array('notBlank'),
-                'message' => 'A password is required'
+                'message' => '必须填写密码'
             )
         ),
         'role' => array(
