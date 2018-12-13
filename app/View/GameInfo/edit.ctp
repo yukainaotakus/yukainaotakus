@@ -24,10 +24,9 @@ $platArray=(bin2dec($decNum));
 
 // print_r(array_values($platArray)) ;
 
-$options = array(1 => 'ps2', 2=>'ps3', 4=>'ps4', 8=>'psp', 16=>'steam/PC', 32=>'psv', 64=>'3DS',128=>'switch',256=>'WiiU',512=>'Xbox/Xbox360');
+$options = array(1 => 'ps2', 2=>'ps3', 4=>'ps4', 8=>'psp', 16=>'steam', 32=>'psv', 64=>'3DS',128=>'switch',256=>'WiiU',512=>'Xbox1/Xbox360',1024=>'PC');
 $selected = $platArray;
 echo $this->Form->input('platform', array('multiple' => 'checkbox', 'options' => $options , 'selected' => $selected ));
-
 
 echo $this->Form->input('price');
 
