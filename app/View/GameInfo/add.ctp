@@ -10,7 +10,7 @@ echo $this->Form->input('publisher');
 echo $this->Form->input('score');
 echo $this->Form->input('introduction');
 
-$options = array(1 => 'ps2', 2=>'ps3', 4=>'ps4', 8=>'psp', 16=>'steam/PC', 32=>'psv', 64=>'3DS',128=>'switch',256=>'WiiU',512=>'Xbox/Xbox360');
+$options = array(1 => 'ps2', 2=>'ps3', 4=>'ps4', 8=>'psp', 16=>'steam', 32=>'psv', 64=>'3DS',128=>'switch',256=>'WiiU',512=>'Xbox1/Xbox360',1024=>'PC');
 //$selected = array(1, 3);
 echo $this->Form->input('platform', array('multiple' => 'checkbox', 'options' => $options ));
 
@@ -22,4 +22,5 @@ echo $this->Form->input('platform', array('multiple' => 'checkbox', 'options' =>
 echo $this->Form->input('price');
 
 echo $this->Form->end('保存数据');
+
 ?>

@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+    <list default="true" id="a63ae102-2f05-489a-adf4-387ec8f52579" name="#7 【基础构建】" comment="#50 【收藏功能】创建：补充数据库信息">
+      <change afterPath="$PROJECT_DIR$/app/Controller/MytestController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/View/Mytest/index.ctp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DDL/DB-01_game_info_v_1.1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/DDL/DB-01_game_info_v_1.1.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Controller/GameInfoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Controller/GameInfoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Vendor/spider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Vendor/spider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/GameInfo/index.ctp" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/GameInfo/index.ctp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/Layouts/default.ctp" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/Layouts/default.ctp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/View/Monsters/trash.txt" beforeDir="false" />
+    </list>
     <list id="056e371b-8650-4a60-aada-1ebf4a03c0e2" name="不需要变更" comment="">
       <change afterPath="$PROJECT_DIR$/app/Config/database.php.default" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-    </list>
-    <list default="true" id="a63ae102-2f05-489a-adf4-387ec8f52579" name="#7 【基础构建】" comment="#33 修复DDL">
-      <change afterPath="$PROJECT_DIR$/app/Controller/CollectionController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Model/Collection.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Vendor/Objects/BasicResult.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/View/GameInfo/index.ctp" beforeDir="false" afterPath="$PROJECT_DIR$/app/View/GameInfo/index.ctp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql创建user表.txt" beforeDir="false" afterPath="$PROJECT_DIR$/DDL/sql创建user表.txt" afterDir="false" />
     </list>
     <ignored path="C:\Programming\phpWorkspace\yukainaotakus\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,56 +29,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CollectionController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Controller/CollectionController.php">
+      <file leaf-file-name="spider.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Vendor/spider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="44" column="17" lean-forward="true" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+            <state relative-caret-position="221">
+              <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DB-01_game_info_v_1.1.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DDL/DB-01_game_info_v_1.1.sql">
+      <file leaf-file-name="GameInfoController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Controller/GameInfoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="43" lean-forward="true" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+            <state relative-caret-position="119">
+              <caret line="76" selection-start-line="76" selection-end-line="76" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sql创建user表.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/DDL/sql创建user表.txt">
+      <file leaf-file-name="default.ctp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BasicResult.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Vendor/Objects/BasicResult.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="13" column="45" lean-forward="true" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Collection.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Model/Collection.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.ctp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/View/GameInfo/index.ctp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1071">
-              <caret line="96" column="45" selection-start-line="96" selection-start-column="45" selection-end-line="96" selection-end-column="45" />
+            <state relative-caret-position="323">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -101,6 +77,12 @@
       <find>vendor</find>
       <find>game_info_id</find>
       <find>GameInfo</find>
+      <find>40px</find>
+      <find>.wu</find>
+      <find>debug</find>
+      <find>游戏列表</find>
+      <find>Platform</find>
+      <find>url</find>
     </findStrings>
     <replaceStrings>
       <replace>col-md</replace>
@@ -151,11 +133,16 @@
         <option value="$PROJECT_DIR$/app/View/Monsters/index.ctp" />
         <option value="$PROJECT_DIR$/DDL/DB-01_game_info_v_1.1.sql" />
         <option value="$PROJECT_DIR$/app/View/GameInfo/add.ctp" />
-        <option value="$PROJECT_DIR$/app/Controller/GameInfoController.php" />
         <option value="$PROJECT_DIR$/app/Model/Collection.php" />
         <option value="$PROJECT_DIR$/app/Vendor/Objects/BasicResult.php" />
         <option value="$PROJECT_DIR$/app/View/GameInfo/index.ctp" />
         <option value="$PROJECT_DIR$/app/Controller/CollectionController.php" />
+        <option value="$PROJECT_DIR$/app/Controller/MytestController.php" />
+        <option value="$PROJECT_DIR$/app/View/Mytest/index.php" />
+        <option value="$PROJECT_DIR$/app/View/Mytest/index.ctp" />
+        <option value="$PROJECT_DIR$/app/Vendor/spider.php" />
+        <option value="$PROJECT_DIR$/app/Controller/GameInfoController.php" />
+        <option value="$PROJECT_DIR$/app/View/Layouts/default.ctp" />
       </list>
     </option>
   </component>
@@ -175,10 +162,10 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="190" />
-    <option name="y" value="80" />
-    <option name="width" value="1584" />
-    <option name="height" value="1344" />
+    <option name="x" value="161" />
+    <option name="y" value="160" />
+    <option name="width" value="1600" />
+    <option name="height" value="918" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -196,7 +183,37 @@
             <path>
               <item name="yukainaotakus" type="b2602c69:ProjectViewProjectNode" />
               <item name="yukainaotakus" type="462c0819:PsiDirectoryNode" />
-              <item name="DDL" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yukainaotakus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yukainaotakus" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yukainaotakus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yukainaotakus" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yukainaotakus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yukainaotakus" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="View" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yukainaotakus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yukainaotakus" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="View" type="462c0819:PsiDirectoryNode" />
+              <item name="Mytest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="yukainaotakus" type="b2602c69:ProjectViewProjectNode" />
+              <item name="yukainaotakus" type="462c0819:PsiDirectoryNode" />
+              <item name="vendors" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -206,27 +223,27 @@
   </component>
   <component name="PropertiesComponent">
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
-    <property name="SearchEverywhereHistoryKey" value="index.ctp&#9;FILE&#9;file://C:/Programming/phpWorkspace/yukainaotakus/app/View/GameInfo/index.ctp&#10;userscont&#9;null&#9;null&#10;monstercon&#9;null&#9;null&#10;ziwojieshao&#9;FILE&#9;file://C:/Programming/phpWorkspace/yukainaotakus/app/webroot/old/homework/gokoyoku/ziwojieshao/ziwojieshao.php&#10;database.php&#9;FILE&#9;file://C:/Programming/phpWorkspace/yukainaotakus/app/Config/database.php.default&#10;core.php&#9;FILE&#9;file://C:/Programming/phpWorkspace/yukainaotakus/app/Config/core.php&#10;步骤7:不存在数据,执行增加&#9;null&#9;null&#10;common&#9;FILE&#9;file://C:/Programming/phpWorkspace/yukainaotakus/View/common_header.php" />
+    <property name="SearchEverywhereHistoryKey" value="default&#9;FILE&#9;file://C:/Programming/phpWorkspace/yukainaotakus/app/View/Layouts/default.ctp&#10;GameInfoController&#9;FILE&#9;file://C:/Programming/phpWorkspace/yukainaotakus/app/Controller/GameInfoController.php&#10;database&#9;FILE&#9;file://C:/Programming/phpWorkspace/yukainaotakus/app/Config/database.php&#10;gameinfocon&#9;FILE&#9;file://C:/Programming/phpWorkspace/yukainaotakus/app/Controller/GameInfoController.php&#10;index.ctp&#9;FILE&#9;file://C:/Programming/phpWorkspace/yukainaotakus/app/View/GameInfo/index.ctp&#10;userscont&#9;null&#9;null&#10;monstercon&#9;null&#9;null&#10;ziwojieshao&#9;FILE&#9;file://C:/Programming/phpWorkspace/yukainaotakus/app/webroot/old/homework/gokoyoku/ziwojieshao/ziwojieshao.php&#10;database.php&#9;FILE&#9;file://C:/Programming/phpWorkspace/yukainaotakus/app/Config/database.php.default&#10;core.php&#9;FILE&#9;file://C:/Programming/phpWorkspace/yukainaotakus/app/Config/core.php&#10;步骤7:不存在数据,执行增加&#9;null&#9;null&#10;common&#9;FILE&#9;file://C:/Programming/phpWorkspace/yukainaotakus/View/common_header.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="C:/xampp/htdocs/project2" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Programming\phpWorkspace\yukainaotakus\app\View\Mytest" />
+      <recent name="C:\Programming\phpWorkspace\yukainaotakus\DDL" />
+      <recent name="C:\Programming\phpWorkspace\yukainaotakus\app\Model" />
+      <recent name="C:\Programming\phpWorkspace\yukainaotakus\app\Controller" />
+      <recent name="C:\Programming\phpWorkspace\yukainaotakus\app\Config" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Programming\phpWorkspace\yukainaotakus\DDL" />
       <recent name="C:\Programming\phpWorkspace\yukainaotakus\images" />
       <recent name="C:\Programming\phpWorkspace\yukainaotakus\uselessSeries\hitDishu" />
       <recent name="C:\Programming\phpWorkspace\yukainaotakus\uselessSeries" />
       <recent name="C:\Programming\phpWorkspace\yukainaotakus" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Programming\phpWorkspace\yukainaotakus\app\Model" />
-      <recent name="C:\Programming\phpWorkspace\yukainaotakus\app\Controller" />
-      <recent name="C:\Programming\phpWorkspace\yukainaotakus\DDL" />
-      <recent name="C:\Programming\phpWorkspace\yukainaotakus\app\Config" />
-      <recent name="C:\Programming\phpWorkspace\yukainaotakus\sound" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -277,7 +294,13 @@
       <workItem from="1543382553621" duration="7981000" />
       <workItem from="1543457743882" duration="9462000" />
       <workItem from="1543822193602" duration="12331000" />
-      <workItem from="1543977380726" duration="4403000" />
+      <workItem from="1543977380726" duration="5750000" />
+      <workItem from="1544076120918" duration="3549000" />
+      <workItem from="1544170244312" duration="2036000" />
+      <workItem from="1544505319236" duration="5820000" />
+      <workItem from="1544582286696" duration="3455000" />
+      <workItem from="1544592379592" duration="238000" />
+      <workItem from="1544601170151" duration="25000" />
     </task>
     <task id="LOCAL-00001" summary="#1 画面】创建一个主页">
       <created>1538717680859</created>
@@ -370,27 +393,40 @@
       <option name="project" value="LOCAL" />
       <updated>1543977458889</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="#50 【收藏功能】创建">
+      <created>1543990306412</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1543990306412</updated>
+    </task>
+    <task id="LOCAL-00015" summary="#50 【收藏功能】创建：补充数据库信息">
+      <created>1543992016466</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1543992016466</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131831000" />
+    <option name="totallyTimeSpent" value="148301000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="109" y="46" width="905" height="768" extended-state="0" />
+    <frame x="184" y="73" width="1600" height="918" extended-state="0" />
+    <editor active="true" />
     <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20779221" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50281423" side_tool="true" weight="0.43005952" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="File Transfer" order="8" weight="0.19471948" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" sideWeight="0.49718574" visible="true" weight="0.42168674" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3272727" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.36599764" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50281423" side_tool="true" weight="0.43005952" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32904148" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49718574" weight="0.46060607" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3272727" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -400,6 +436,8 @@
       <window_info anchor="bottom" id="Messages" order="7" weight="0.3299566" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="File Transfer" order="8" weight="0.09371555" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32904148" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,7 +491,9 @@
     <MESSAGE value="#33 修复DDL" />
     <MESSAGE value="测试Eclipse提交代码" />
     <MESSAGE value="#40 排版被覆盖了，此处进行修正" />
-    <option name="LAST_COMMIT_MESSAGE" value="#40 排版被覆盖了，此处进行修正" />
+    <MESSAGE value="#50 【收藏功能】创建" />
+    <MESSAGE value="#50 【收藏功能】创建：补充数据库信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="#50 【收藏功能】创建：补充数据库信息" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -461,14 +501,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/homework/ritenu/index.php" />
-    <entry file="file://$PROJECT_DIR$/homework/gokoyoku/index.php" />
-    <entry file="file://$PROJECT_DIR$/homework/ka/userRegist.php" />
-    <entry file="file://$PROJECT_DIR$/lib/Object/Layout.php" />
-    <entry file="file://$PROJECT_DIR$/View/common_footer.php" />
-    <entry file="file://$PROJECT_DIR$/uselessSeries/php_little_game/roll_point.php" />
-    <entry file="file://$PROJECT_DIR$/jsonData.txt" />
-    <entry file="file://$PROJECT_DIR$/images/bg.png" />
     <entry file="file://$PROJECT_DIR$/images/favicon.png" />
     <entry file="file://$PROJECT_DIR$/images/house.png" />
     <entry file="file://$PROJECT_DIR$/images/kabotya.png" />
@@ -523,13 +555,6 @@
             <caret line="8" column="14" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Config/database.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="75" column="23" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -589,13 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/GameInfoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/Cake/Test/Case/Core/AppTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
@@ -610,13 +628,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/View/GameInfo/index.ctp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1071">
-          <caret line="96" column="45" selection-start-line="96" selection-start-column="45" selection-end-line="96" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/Collection.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -624,10 +635,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Controller/CollectionController.php">
+    <entry file="file://$PROJECT_DIR$/DDL/sql创建user表.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="44" column="17" lean-forward="true" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
@@ -638,10 +649,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DDL/sql创建user表.txt">
+    <entry file="file://$PROJECT_DIR$/DDL/collections.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/img/gameInfo/game_img_2_1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/webroot/img/gameInfo/game_img_7_1.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/GameInfo/index.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1513">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/CollectionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Vendor/testspider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/MytestController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Mytest/index.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Config/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <caret line="55" column="98" selection-start-line="55" selection-start-column="98" selection-end-line="55" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Vendor/spider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Controller/GameInfoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/View/Layouts/default.ctp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
