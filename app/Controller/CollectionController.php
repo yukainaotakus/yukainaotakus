@@ -11,16 +11,25 @@ class CollectionController extends AppController {
         $this->Auth->allow();
 
 
-    }
+	}
+	
+	public function showCollection(){
+		$this->loadModel("Collection");
+		$a=$this->Collection->find('list',array(
+			'fields'=>array('id','game_id'),
+			'conditions'=>array('user_id'=>$userId)));
+
+		debug($a);
+		$this->set('show', $a);
+	}
 
 	/**
 	 * 显示“我的收藏”
 	 */
     public function addCollection(){
         //
-		debug($this->Collection->find('all'));
-    }
-
+		debug($this->Collection->findAllByuser_id());
+	}
 	/**
 	 * 增加收藏
 	 */
@@ -37,20 +46,32 @@ class CollectionController extends AppController {
 		$gameId = $this->request->query("game_info_id");
 
 
-//		debug($userId);
-//		debug($gameId);
-
+		// debug($userId);
+		// debug($gameId);
+		
 		// ------------ 2 业务逻辑 ------------
 		// 存储数据
 		$data = [
 			'user_id'=>$userId,
 			'game_id'=>$gameId
 		];
+		//debug($this->Collection->find('all',array(
+			// 'conditions'=>array('user_id'=>$userId))));
 
 		try {
 			$this->Collection->save($data);
 		} catch(Exception $e){
-			$result =  new BasicResult(false, "您已经收藏过了");
+			//取消收藏
+			$cancel=$this->Collection->find(
+				'first', array(
+					'conditions'=>array('user_id'=>$userId,'game_id'=>$gameId)
+					 	)
+					);
+			//拿到这个新数据的id
+			$id=$cancel['Collection']['id'];
+			$this->Collection->delete($id);
+			$result =  new BasicResult(false, "您已取消收藏");
+			
 			return json_encode($result);
 		}
 
