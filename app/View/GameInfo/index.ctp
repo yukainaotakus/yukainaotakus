@@ -254,18 +254,33 @@ $pageEnd = $pagenation['pageEnd'];
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 
 echo '<nav aria-label="...">';
-echo '<ul class="pagination pagination-lg">';
-echo '<li class="page-item"><a class="page-link" href="?page=' . ($page - 1) . '">上一页</a ></li>';
+echo   '<ul class="pagination">';
+echo     '<li class="page-item disabled">';
+       
+echo     "</li>";
+		$disabled=$page==1?'disabled':'';
+echo     "<li class=\"page-item {$disabled}\">";
+echo '<a class=\'page-link\' href="?page=' . ($page - 1) . '">上一页</a></li>';
 
 
 for ($a = $pageBegin; $a <= $pageEnd; $a++) {
+	$activeClass = $a == $page ? 'active' : '';
+	echo "<li class=\"page-item {$activeClass}\">
+	<a class='page-link' href=\"?page={$a}\">{$a}</a ></li>";
 
-	echo '<li class="page-item"><a class="page-link" href="?page=' . $a . '">' . $a . '</a ></li>';
+
+// debug($page);
+//  debug($a);	
 }
 
-echo '<li class="page-item"><a class="page-link" href="?page=' . ($page + 1) . '">下一页</a ></li>';
-echo '</ul>';
-echo '</nav>';
+echo '<span class="sr-only">(current)</span>';
+$disabledlast=$page==$pageEnd?'disabled':'';
+echo     "<li class=\"page-item {$disabledlast}\">";
+			
+echo       '<a class=\'page-link\' href="?page=' . ($page + 1) . '">下一页</a>';
+echo     "</li>";
+echo   "</ul>";
+echo 		"</nav>";
 
 
 ?>
