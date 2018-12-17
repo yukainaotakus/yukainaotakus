@@ -57,7 +57,7 @@
 					if (response.result === true){
 						//alert("收藏成功");
 						$('.alert').html('收藏成功！').addClass('alert-success').show().delay(2000).fadeOut();
-						po.html('💗');
+						po.html('♥');
 					} else {
 						//alert(response.msg);
 						$('.alert').html(response.msg).addClass('alert-warning').show().delay(2000).fadeOut();
@@ -215,17 +215,15 @@
 
                 </div>
 
-
                 <div class="col-3">
-
-
                     <!-- 游戏价格: <?php echo $GameInfo['GameInfo']['price']; ?><br> -->
 
                     <br>
+
                     游戏介绍:<?php echo $GameInfo['GameInfo']['introduction']; ?><br>
 					<?php
 					if (in_array($GameInfo['GameInfo']['id'], $show)) {
-						$mark="💗";
+						$mark="♥";
 
 					  }else{$mark="♡";}
 						
@@ -234,7 +232,8 @@
 							'action' => 'ajaxCollection',
 							'?' => ['game_info_id' => $GameInfo['GameInfo']['id']],
 						), [
-							'data-ajax' => 'link'
+							'data-ajax' => 'link',
+                            'style'=>'font-size:2em;color:red;text-decoration:none;'
 						]
 
 					);
