@@ -49,7 +49,23 @@ class GameInfoController extends AppController {
 		// 执行数据操作
 	}
 
+	public function tenki() {
+        $add = $_GET['add'];
+
+        $data = [
+            'add'=>$add,
+            'tenki'=>'晴转多云'
+        ];
+        echo json_encode($data);
+
+
+        sleep(2);
+
+    }
+
     public function index(){
+
+//        debug($this->request->clientIp());
 
         if ($this->request->is('GET')){
         $page=isset($_GET['page'])?$_GET['page']:1;
@@ -100,6 +116,14 @@ class GameInfoController extends AppController {
 		$this->set('pagenation', $pagenation = getPage($page,$itemCount));
 		$this->set('gameinfo', $this->GameInfo->find('all', array('limit' => $pagenation['itemPerPage'],  'page' =>$page)));
 
+       
+            $this->loadModel("Collection");
+            $a=$this->Collection->find('list',array(
+                'fields'=>array('id','game_id'),
+                'conditions'=>array('user_id'=>$this->Auth->user("id"))));
+    
+            $this->set('show', $a);
+        
 	}
 
    public function view($id = null) {
