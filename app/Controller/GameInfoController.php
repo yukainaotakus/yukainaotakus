@@ -116,6 +116,14 @@ class GameInfoController extends AppController {
 		$this->set('pagenation', $pagenation = getPage($page,$itemCount));
 		$this->set('gameinfo', $this->GameInfo->find('all', array('limit' => $pagenation['itemPerPage'],  'page' =>$page)));
 
+       
+            $this->loadModel("Collection");
+            $a=$this->Collection->find('list',array(
+                'fields'=>array('id','game_id'),
+                'conditions'=>array('user_id'=>$this->Auth->user("id"))));
+    
+            $this->set('show', $a);
+        
 	}
 
    public function view($id = null) {
