@@ -41,16 +41,6 @@ CREATE TABLE `like` (
   `updated_date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新日時 '
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
 
---
--- 转存表中的数据 `like`
---
-
-INSERT INTO `like` (`id`, `user_id`, `game_id`, `user_iine`, `user_noiine`, `user_ip`, `created_user`, `created_date`, `updated_user`, `updated_date`) VALUES
-(42, 0, 0, 0, -1, '', 'System', '2018-12-17 11:10:50', 'System', '2018-12-17 11:10:50');
-
---
--- 转储表的索引
---
 
 --
 -- 表的索引 `like`
@@ -67,7 +57,7 @@ ALTER TABLE `like`
 -- 使用表AUTO_INCREMENT `like`
 --
 ALTER TABLE `like`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
