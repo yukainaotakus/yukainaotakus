@@ -88,10 +88,11 @@
 			"type":"get",
 			"success":function(response){
 				if(response.result===true){
-					alert("点赞成功");
+					$('.alert').html('操作成功！').addClass('alert-success').show().delay(2000).fadeOut();
 
 				}else{
-					alert(response.msg)
+					$('.alert').html(response.msg).addClass('alert-success').show().delay(2000).fadeOut();
+
 				}
 			},
 			"error": function(){
@@ -261,7 +262,7 @@
 						array(		
 						'controller'=>'Likes',
 						'action'=>'ajaxLike',
-						'?' => ['game_info_id' => $GameInfo['GameInfo']['id']],
+						'?' => ['game_info_id' => $GameInfo['GameInfo']['id'],'like'=>1],
 					), [
 						'data-ajaxLike' => 'link',
 						'escape' => false
@@ -283,8 +284,8 @@
 							// "<img src='/img/iine.png' >",
 						array(		
 						'controller'=>'Likes',
-						'action'=>'ajaxdontlike',
-						'?' => ['game_info_id' => $GameInfo['GameInfo']['id']],
+						'action'=>'ajaxLike',
+						'?' => ['game_info_id' => $GameInfo['GameInfo']['id'],'like'=>-1],
 					), [
 						'data-ajaxLike' => 'link',
 						'escape' => false
