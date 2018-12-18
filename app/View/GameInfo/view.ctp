@@ -49,13 +49,21 @@ App::import('Vendor','platform');
 
         <div class="row">
             <div class="col-6">
-            <p><?php echo "游戏类型： sdadasds" ?></p>
+            <p><?php echo "游戏类型：  ".h($gameinfo['GameInfo']['type']); ?></p>
             <p><?php echo "发售时间： ". h($gameinfo['GameInfo']['release_date']); ?></p>
             <p><?php echo "发行商： ". h($gameinfo['GameInfo']['publisher']); ?></p>
             </div>
             <div class="col-6">
             <p><?php echo "定价： ". h($gameinfo['GameInfo']['price']); ?></p>
-            <p><?php echo "运行平台：sdasadaddaas"; ?></p>
+            <p><?php $decNum=h($gameinfo['GameInfo']['platform']); 
+            $platArray=(bin2dec($decNum)) ;
+
+            $myPlatform=showPlatform($platArray);
+            echo "运行平台：";
+            foreach ($myPlatform as $key => $value) {
+            echo $key." ";
+            }; 
+            ?></p>
             </div>
         </div> 
      <p><?php echo " 游戏简介： ". h($gameinfo['GameInfo']['introduction']); ?></p>
