@@ -5,8 +5,6 @@ class UsersController extends AppController {
 
     public $helpers = array('Html', 'Form','Flash');
     public $components = array('Flash');
-    
-    
 
     public function beforeFilter() {
         parent::beforeFilter();
@@ -30,10 +28,37 @@ class UsersController extends AppController {
     return $this->redirect($this->Auth->logout());
     }
 
-    public function index() {
+    public function index($id = null) {
         $this->User->recursive = 0;
         $this->set('users', $this->paginate());
+        $id=$this->Auth->user('id');
+       if(isset($id)){
+        $this->loadModel('Collection');
+        $tmp = $this->Collection->find('list',array('fields'=>'game_id',
+        'conditions' => array('user_id'=>$id)));
+
+        foreach($tmp as $value){
+            $my[]=$value;
+        }
+        $this->loadModel('GameInfo');
+        $aaa = $this->GameInfo->find('all',array('conditions'=>array('id'=>$tmp)));
+
+      //$my=
+        $this->set("list",$aaa);
+       }else{echo 123;}
+
+       
+        
+       
+
+        // $list = $this->Collection->find('all');
+		// $this->set("list", $list);
     }
+
+
+
+
+
 
     public function view($id = null) {
         $this->User->id = $id;
