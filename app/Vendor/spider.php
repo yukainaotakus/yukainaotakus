@@ -33,7 +33,7 @@ for($Amount=148;$Amount<=197;$Amount++){
 	preg_match_all($a,$html,$pl);
 
 	//匹配抓取网页上的平台信息
-	$match=array(1 => 'ps2', 2=>'ps3', 4=>'ps4', 8=>'psp', 16=>'steam', 32=>'psv', 64=>'3ds',128=>'switch',256=>'wiiu',512=>'xb11',1024=>'win10');
+	$match=array(1 => 'ps2', 2=>'ps3', 4=>'ps4', 8=>'psp', 16=>'steam', 32=>'psv', 64=>'3ds',128=>'switch',256=>'wiiu',512=>'xb1',1024=>'win10');
 	//转成十进制
 
 	$result=Platform($pl[1]);

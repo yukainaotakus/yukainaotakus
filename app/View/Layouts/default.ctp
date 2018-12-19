@@ -106,8 +106,16 @@
 		 			 <button type='button' class='btn btn-secondary dropdown-toggle' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>"."您好".$this->Session->read('Auth.User.username').
 						"</button>
 						  <div class='dropdown-menu'>
-						<a class='dropdown-item' href='#'>"."查看个人信息"."</a>"."<div class='dropdown-divider'></div>";
-						echo $this->Html->link(
+						<a class='dropdown-item'>".$this->Html->link(
+							'我的主页',['controller' => 'Users',
+								'action' =>'index',$this->Session->read('Auth.User.id')] ,
+							array('class' => 'dropdown-item')
+						)."</a>"."<div class='dropdown-divider'></div>".$this->Html->link(
+							'修改个人信息',['controller' => 'Users',
+								'action' =>'edit',$this->Session->read('Auth.User.id')] ,
+							array('class' => 'dropdown-item')
+						)."</a>"."<div class='dropdown-divider'></div>".
+						$this->Html->link(
 						'退出登录',['controller' => 'Users',
 							'action' =>'logout'] ,
 						array('class' => 'dropdown-item')
