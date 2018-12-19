@@ -73,8 +73,9 @@ class GameInfoController extends AppController {
         $itemCount=$this->GameInfo->find('count'); //数据总数
         // function getPage($page=1){
         // echo "这里是getpage函数,我要在这里返回显示的最大页数";
-
-
+        // $this->Like->find('all'));
+        // $game[]=$value['GameInfo']['id'];
+        // debug($game[]);
         //     }
         function getPage($page,$itemCount){
                 //if判断如果当前是首页了的话
@@ -122,11 +123,118 @@ class GameInfoController extends AppController {
                 'fields'=>array('id','game_id'),
                 'conditions'=>array('user_id'=>$this->Auth->user("id"))));
     
+                
             $this->set('show', $a);
-        
-	}
+      
 
-   public function view($id = null) {
+
+        $this->loadModel("like");
+        
+  
+      
+        $l=$this->like->find('all');
+     // debug($l);
+
+     //计数 点赞 计数 点赞计数 点赞计数 点赞计数 点赞计数 点赞计数 点赞计数 点赞计数 点赞计数 点赞
+        $b=$this->like->find('all',array(
+         'fields' =>array('like.game_id',
+         'count(user_iine) as like_count'
+         )
+        ,
+            'conditions'=>array(
+            
+               
+                'user_iine'=>'1'
+           
+
+            ),
+            'group' => 'game_id'
+        ));       
+$gllist=[];
+        foreach ($b as $v) {
+           
+ // debug($v);
+$gameId=$v['like']['game_id'];
+//debug($gameId);
+$likeCount = $v[0]['like_count'];
+//debug($likeCount);
+
+$gllist[$gameId]=$likeCount;
+//debug($gllist);
+        }
+        $this->set('uplike', $gllist);
+ 
+        
+   
+
+          
+//bad like 计数点踩 计数点踩 计数点踩 计数点踩 计数点踩 计数点踩 计数点踩 计数点踩 计数点踩 计数点踩 计数点踩 计数点踩 
+
+$badlike=$this->like->find('all',array(
+    'fields' =>array('like.game_id',
+    'count(user_noiine) as nolike_count '
+    )
+   ,
+       'conditions'=>array(
+       
+          
+           'user_noiine'=>'1'
+          
+
+       ),
+       'group' => 'game_id'
+   ));
+//debug($badlike);
+$badlist=[];
+   foreach ($badlike as $badval) {
+      
+// debug($$badval);
+$badgameId=$badval['like']['game_id'];
+//debug($badgameId);
+$badlikeCount = $badval[0]['nolike_count'];
+//debug($badlikeCount);
+
+$badlist[$badgameId]=$badlikeCount;
+
+   }
+   $this->set('dislike', $badlist);
+
+
+
+
+
+       
+
+     $c=$this->like->find('count',array(
+        'conditions'=>array( 'user_noiine'=>'1'
+
+     ),
+    
+    ));
+    //debug($c);
+
+    $this->set('downlike', $c);
+        // $c=$this->like->find('all');
+        //         debug($c);
+
+
+        //拿到数据资源 这是个空的
+//  $db = $this->getDataSource();
+// //debug($db);
+//  //取到所有
+
+// //  App::uses('ConnectionManager', 'like');
+// // $db = ConnectionManager::getDataSource("index");
+// debug($db);
+// //debug($db->query('Get', array('test')));
+// $db->fetchAll(
+//     'SELECT * from `like` where user_iine=:user_iine',
+//     array('user_iine' => '1')
+// );
+// debug($db);
+        }
+
+    public function view($id = null) {
         if (!$id) {
             throw new NotFoundException(__('Invalid gameinfo'));
         }

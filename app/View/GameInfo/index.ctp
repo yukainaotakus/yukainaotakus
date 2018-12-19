@@ -1,3 +1,9 @@
+<?php
+App::import('Vendor','util');
+App::import('Vendor','platform');
+?>
+
+
 <!-- File: /app/View/Monsters/index.ctp -->
 <style>
 
@@ -131,20 +137,19 @@
 	})
 </script>
 
-
-
-
-
-
     <div class="container">
 	<h1>2019游戏最佳排行 <span style="color:red;"> *HOT</span></h1>
 	<div class="alert"></div>
 
 		<?php 
-		App::import('Vendor','util');
-		App::import('Vendor','platform');
 
-		 foreach ($gameinfo as $GameInfo): ?>
+//debug($dislike);
+
+
+		 foreach ($gameinfo as $GameInfo): 
+			//拿到id
+			$gameid = $GameInfo['GameInfo']['id'];
+		 ?>
 
 
             <div class="row">
@@ -209,7 +214,7 @@
 					$myPlatform=showPlatform($platArray);
 					foreach ($myPlatform as $key => $value) {
   					  		echo $key." ";
-								}  
+								} 
 							 ?><br> 
                     <br>
                     评分:<?php echo $GameInfo['GameInfo']['score']; ?><br>
@@ -263,13 +268,16 @@
 						'controller'=>'Likes',
 						'action'=>'ajaxLike',
 						'?' => ['game_info_id' => $GameInfo['GameInfo']['id'],'like'=>1],
+						
 					), [
 						'data-ajaxLike' => 'link',
 						'escape' => false
 					]
-					);
 					
+					);
 				
+				echo isset($uplike[$gameid])?$uplike[$gameid]:0;
+					//debug($uplike);
 			
 					?>
 				
@@ -277,7 +285,7 @@
 <br>
 <br>
 <?php
-					
+			
 					echo $this->Html->link(
 						$this->Html->image("bad.png",['width' => '60',
 							'height' => '60']),
@@ -291,12 +299,14 @@
 						'escape' => false
 					]
 					);
+
+					echo isset($dislike[$gameid])?$dislike[$gameid]:0;
 				
 				?>
                 
                 </div>
 
-
+			
             </div>
 <hr>
 		<?php endforeach; ?>
