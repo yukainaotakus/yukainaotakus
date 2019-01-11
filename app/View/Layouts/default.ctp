@@ -5,7 +5,7 @@
 	<?php echo $this->Html->charset();
 	?>
 	<title>monster |-|
-		
+
 		<?php echo $this->fetch('title'); ?>
 	</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -62,10 +62,10 @@
       </li>
 	</ul>
 
-			
+
 	 <ul class="navbar-nav ml-auto">
 			<li class="nav-item">
-			<?php 
+			<?php
 			if(!empty($this->Session->read('Auth.User.username'))){
 				// echo "";
 
@@ -73,9 +73,9 @@
 			echo $this->Html->link("点我登录", [ 'controller' => 'Users',
 												'action' =>'login'],[
 													'class'=>'nav-link',
-													
+
 												]);}
-												
+
 												?>
 
 
@@ -86,20 +86,20 @@
 			<?php if(!empty($this->Session->read('Auth.User.username'))){
 			}else{
 			echo $this->Html->link(
-				'点我注册', 
+				'点我注册',
 				[
 				'controller' => 'Users',
 							'action' =>'add'
 					],
 					[
 						'class'=>'nav-link',
-						
+
 					]
 					);} ?>
 
 			</li>
-		
-		
+
+
 		  	<li>
 	  		<?php if(!empty($this->Session->read('Auth.User.username'))){
 		 		 echo "<div class='btn-group'>
@@ -119,16 +119,9 @@
 						'退出登录',['controller' => 'Users',
 							'action' =>'logout'] ,
 						array('class' => 'dropdown-item')
-					); }else{}
+					); }
 
 
-		// 	<div class='dropdown-divider'></div>
-		// 	<a class='dropdown-item'>".$this->Html->link('退出登录',array('class' => 'dropdown-divider'),['controller' => 'Users',
-		// 	'action' =>'logout'])."</a>
-		//   </div>
-		// </div>";
-	 
-	 
 	  ?>
 	  </li>
 
@@ -144,9 +137,7 @@
 			<?php echo $this->Flash->render(); ?>
 
 			<?php echo $this->fetch('content'); ?>
-		
 
 
-	
 </body>
 </html>
