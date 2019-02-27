@@ -1,6 +1,6 @@
 <?php
 App::uses('AppController', 'Controller');
-
+App::import('Vendor', 'Objects/BasicResult');
 class UsersController extends AppController {
 
     public $helpers = array('Html', 'Form','Flash');
@@ -8,24 +8,100 @@ class UsersController extends AppController {
 
     public function beforeFilter() {
         parent::beforeFilter();
-        $this->Auth->allow('add', 'logout');
+        $this->Auth->allow('add', 'logout','login','edit');
+    }
+
+     public function levelUp(){
+        $this->autoRender = false ;
+        // $this->Auth->user('role')==ssr ;
+        //debug($this->Auth->user());
+     $search=$this->request->query('search');
+
+    $find=$this->User->findAllByIdOrUsername($search, $search);
+
+    //验证是否为空 为空报错
+    if(empty($find)){
+       $result = false ;
+       return $result;
+        }
+    //有用户 验证用户数量 + 权限
+    //当有一个用户(第二个是空) 且权限不是u时报错 没有查到对应用户
+        if(empty($find[1]['User'])){
+             if($find[0]['User']['role']!=='u'){
+                $result = false;
+                return $result;
+
+             }else{
+                $data =[$find[0]['User']['id'],$find[0]['User']['username']];
+
+            }
+
+         }else{   //数组不为空 且第二个也不是空 ==搜出了两个用户
+
+             if($find[0]['User']['role']=='u' && $find[1]['User']['role']=='u'){ // 1&2合法
+                $data=[$find[0]['User']['id'],$find[0]['User']['username'],$find[1]['User']['id'],$find[1]['User']['username']];
+               // debug($data);
+
+                $result="<table border=\"1\"  class=\"col-6\" ><tr><td>"."用户ID:"."$data[0]"."</td><td>"."用户名:"."$data[1]"."</td>
+                <td><button class='doLevelUp' id=\"$data[0]\">升级</button></td></tr>
+                <tr><td>"."用户ID:"."$data[2]"."</td><td>"."用户名:"."$data[3]"."</td>
+                <td><button class='doLevelUp' id=\"$data[2]\">升级</button></td></tr></table>";
+		        return $result;
+
+                }elseif($find[0]['User']['role']!='u'&& $find[1]['User']['role']=='u'){      //1不行 2合法
+                     $data=[$find[1]['User']['id'],$find[1]['User']['username']];
+
+                    }elseif($find[0]['User']['role']=='u'&& $find[1]['User']['role']!='u'){     //1合法 2不行
+                        $data=[$find[0]['User']['id'],$find[0]['User']['username']];
+
+                 }else{
+                $result = false ;
+                return $result;
+                    }
+            }
+            $result="<table border=\"1\"  class=\"col-6\" ><tr><td>"."用户ID:"."$data[0]"."</td><td>"."用户名:"."$data[1]"."</td>
+               <td><button class='doLevelUp' id=\"$data[0]\">升级</button></td></tr></table>";
+               return $result;
+
+            }
+
+
+
+    public function doLevelUp(){     //这里的id想要变更对象的id
+        $this->autoRender = false ;
+        if($this->Auth->user('role')!='ssr'){
+            $result =  new BasicResult(false, "你没有操作权限");
+            return json_encode($result);
+        }else{
+            $id=$this->request->query('id');
+            $find=$this->User->findById($id);
+
+            $find['User']= array('id' => $id, 'role' => 'sr');
+            if($this->User->save($find)) {
+                $result =  new BasicResult(true, "权限已变更为sr");
+                return json_encode($result);
+             }
+             $result =  new BasicResult(false, "迷之错误");
+		     return json_encode($result);
+
+        }
     }
 
     public function login() {
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
                 $this->Flash->success('登陆成功');
-                //debug($_SESSION);
-              
-                return $this->redirect(array('action' => 'index'));
-                //return $this->redirect($this->Auth->redirectUrl());
+                return $this->redirect(array('controller' => 'Users','action' => 'index',$this->Auth->user('id')));
+
             }
             $this->Flash->error(__('用户名或者密码有误，请重新输入'));
-        }
-    }   
+			return $this->redirect($this->Auth->redirectUrl());
+
+		}
+    }
 
     public function logout() {
-    return $this->redirect($this->Auth->logout());
+         return $this->redirect($this->Auth->logout());
     }
 
     public function index($id = null) {
@@ -33,9 +109,9 @@ class UsersController extends AppController {
         $this->set('users', $this->paginate());
         $id=$this->Auth->user('id');
        if(isset($id)){
-        $this->loadModel('Collection');
-        $tmp = $this->Collection->find('list',array('fields'=>'game_id',
-        'conditions' => array('user_id'=>$id)));
+            $this->loadModel('Collection');
+            $tmp = $this->Collection->find('list',array('fields'=>'game_id',
+             'conditions' => array('user_id'=>$id)));
 
         foreach($tmp as $value){
             $my[]=$value;
@@ -45,11 +121,11 @@ class UsersController extends AppController {
 
       //$my=
         $this->set("list",$aaa);
-       }else{echo 123;}
+       }else{}
 
-       
-        
-       
+
+
+
 
         // $list = $this->Collection->find('all');
 		// $this->set("list", $list);
@@ -88,15 +164,14 @@ class UsersController extends AppController {
     public function edit($id = null) {
         $this->User->id = $id;
         $this->loadModel('UserInfo');
-        
-        //debug($this->UserInfo->findByUserId($id));
+
         if (!$this->User->exists()) {
             throw new NotFoundException(__('无效数据'));
         }
         if ($this->request->is('post') || $this->request->is('put')) {
             $now=$this->UserInfo->findByUserId($id);
                 $sex=array_sum($_POST['data']['UserInfo']['sex_div']);
-                //$result=$this->request->data;
+                //$find=$this->request->data;
                 $data=[
                     'id'=>$now['UserInfo']['id'],
                     'user_id'=>$id,
@@ -106,11 +181,9 @@ class UsersController extends AppController {
                     'birthday'=>$_POST['data']['UserInfo']['birthday']
                     ];
 
-                   // debug($now['UserInfo']);
-
             if ($this->UserInfo->save($data)) {
                 $this->Flash->success(__('编辑成功'));
-                //debug($result);
+                //debug($find);
                 return $this->redirect(array('action' => 'index'));
             }
             $this->Flash->error(
@@ -123,8 +196,6 @@ class UsersController extends AppController {
     }
 
     public function delete($id = null) {
-
-
         $this->request->allowMethod('post');
 
         $this->User->id = $id;
