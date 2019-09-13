@@ -4,6 +4,39 @@
 App::import('Vendor','util');
 App::import('Vendor','platform');
 ?>
+<style>
+    .yonghupinglun{
+        border-top:1px solid #000;
+        border-color: #FFFAF0;
+
+    }
+    .diyitiao{
+        border-bottom:1px dashed #000;
+
+    }
+    .qitatiao{
+        border-bottom:1px  dashed #000;
+
+    }
+    h4{
+        background-color: #FFFAF0;
+    }
+    h5{
+        border-bottom:1px solid #000;
+        border-color: #DB7093;
+    }
+    h6{
+        border-bottom:1px solid#000;
+        border-color: #DB7093;
+    }
+    .huifu{
+        float:right;
+    }
+    .moreyonghu{
+        text-align:center;
+    }
+</style>
+
 
 <div class="row">
     <div class="col-12" style="margin-top:20px;">
@@ -117,40 +150,7 @@ App::import('Vendor','platform');
         
 
         <!-- 用户评论的位置 -->
-    <style>
-    .yonghupinglun{
-        border-top:1px solid #000;
-        border-color: #FFFAF0;
 
-    }
-    .diyitiao{
-        border-bottom:1px dashed #000;
-        
-    }
-    .qitatiao{
-        border-bottom:1px  dashed #000;
-        
-    }
-    h4{
-
-        background-color: #FFFAF0;
-    }
-    h5{
-        border-bottom:1px solid #000;
-        border-color: #DB7093;
-    }
-    h6{
-        border-bottom:1px solid#000;
-        border-color: #DB7093;
-    }
-    .huifu{
-        float:right;
-    }
-    .moreyonghu{
-        text-align:center;
-
-    }  
-    </style>
     <div class="yonghupinglun">
     <h4>热门用户评论</h4>
       

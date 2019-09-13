@@ -2,6 +2,27 @@
 <project version="4">
   <component name="PublishConfigData" autoUpload="On explicit save action" serverName="yutaku">
     <serverData>
+      <paths name="cloud">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="cloud jec-app">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="gcloud wordpress theme">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="gcloud(dooun.net)">
         <serverdata>
           <mappings>
@@ -9,21 +30,28 @@
           </mappings>
         </serverdata>
       </paths>
-      <paths name="learn.dooun.net(gcloud)">
+      <paths name="hl-soft">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="school.dooun.net">
+      <paths name="solrClientTest">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
-      <paths name="task.dooun.net(gcloud)">
+      <paths name="typeStyle">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="wordpress01-sydney-child">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />
@@ -34,6 +62,13 @@
         <serverdata>
           <mappings>
             <mapping deploy="/var/www/yukainaotakus.dooun.net/public_html" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="yutaku2">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/var/www/yutaku.dooun.net/public_html" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

@@ -118,7 +118,7 @@ App::import('Vendor', 'platform');
 				$gameid = $GameInfo['GameInfo']['id'];
 				?>
                 <div class="row">
-                    <div class="col-sm-3 col-6">
+                    <div class="col-sm-3 col-6" style="font-size:12px;">
 						<?php
 						echo $this->Html->image("gameInfo/game_{$GameInfo['GameInfo']['outer_key']}_main.jpg", [
 							'style' => 'width:100%'
@@ -158,7 +158,7 @@ App::import('Vendor', 'platform');
                         <br>
 
                     </div>
-                    <div class="col-sm-5 col-6">
+                    <div class="col-sm-4 col-6" style="font-size:12px;">
 						<?php
 						echo $this->Html->link($GameInfo['GameInfo']['game_name'], array(
 							'action' => 'view',
@@ -183,13 +183,13 @@ App::import('Vendor', 'platform');
                         评分:<?php echo $GameInfo['GameInfo']['score']; ?><br>
                     </div>
 
-                    <div class="col-sm-3 col-10">
+                    <div class="col-sm-4 col-10">
                         <!-- 游戏价格: <?php echo $GameInfo['GameInfo']['price']; ?><br> -->
 
                         <br>
 
                         游戏介绍:
-						<div style="max-height:200px; overflow-y:hidden">
+						<div style="max-height:200px; overflow-y:hidden;font-size:12px;">
 							<?php echo $GameInfo['GameInfo']['introduction']; ?><br>
 						</div>
 						<?php
@@ -218,18 +218,8 @@ App::import('Vendor', 'platform');
 
                     <div class="col-sm-1 col-2">
 						<?php
-						// echo $this->Html->link('赞', array(
-						// 	'controller' => 'Likes',
-						// 	'action' => 'ajaxLike',
-						// 	'?' => ['game_info_id' => $GameInfo['GameInfo']['id']],
-						// ), [
-						// 	'data-ajaxLike' => 'link'
-						// ]
-
-						//);
 						echo $this->Html->link($this->Html->image("good.png", [
-							'width' => '60',
-							'height' => '60'
+							'width' => '30',
 						]), // "<img src='/img/iine.png' >",
 							array(
 								'controller' => 'Likes',
@@ -257,8 +247,7 @@ App::import('Vendor', 'platform');
 						<?php
 
 						echo $this->Html->link($this->Html->image("bad.png", [
-							'width' => '60',
-							'height' => '60'
+							'width' => '30',
 						]), // "<img src='/img/iine.png' >",
 							array(
 								'controller' => 'Likes',
@@ -319,7 +308,6 @@ App::import('Vendor', 'platform');
 
 			<!--假的过滤器-->
 			<form>
-				<h2>按照时间查找</h2>
 				<h4>已选择条件</h4>
 				<button class="btn btn-info btn-sm">啥都没</button>
 				<hr>
@@ -340,12 +328,7 @@ App::import('Vendor', 'platform');
 				<button class="btn btn-danger btn-sm">satosi</button>
 				<button class="btn btn-success btn-sm">Android</button>
 				<button class="btn btn-link btn-sm">IOS</button>
-
 				<hr>
-				<h4>游戏语言</h4>
-				<button class="btn btn-link btn-sm">PHP</button>
-				<button class="btn btn-link btn-sm">C#</button>
-				<button class="btn btn-link btn-sm">Python</button>
 				<hr>
 				<h4>游戏类型</h4>
 				<button class="btn btn-info btn-sm">杀人</button>
